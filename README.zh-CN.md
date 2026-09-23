@@ -8,6 +8,51 @@
 
 **English** · [中文](README.zh-CN.md)
 
+## 这是什么
+
+这是一个**独立的、非官方**的 Jev 项目精选清单，收录 **84 个项目、12 个类别**。
+与 TypeSafe AI 没有隶属关系，也没有得到它的背书。
+
+搜 "Jev" 会出来上万个仓库，大部分点进去是空的、改名的、或者只是把官方文档抄了一遍。
+**这个清单回答的不是「Jev 是什么」**——那是[官方文档](https://docs.typesafe.ai)的活，
+而且它会变。这里回答的是另一个问题：**这么多项目里，我该看哪个、为什么是它。**
+
+## 会更新什么
+
+**这份清单会持续更新。** 说清楚它更新什么、不更新什么：
+
+- 🔄 **星数和最近更新日期是实时的** —— 页面上全部是徽章，不是写死的数字，
+  每次打开都会变。⛔ 也因此永远不会过期。
+- 🤖 **排序表每天自动重算** —— 每天 03:17 由 GitHub Actions 跑
+  `scripts/fetch_stars.py` + `scripts/gen_readme.py` 重排 📈 热门榜。
+- 🔍 **死链每天被脚本查一遍** —— 仓库被删或改名会被直接报出来。
+  ⚠️ 这一条不加脚本的话会**静默失败**：徽章只是安静地显示 `repo not found`，
+  没人顺手去查的话它会一直躺在那儿。
+- ✍️ **新条目要过收录标准** —— 见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+  一句话概括：**写不出「为什么是它」的项目不进列表。**
+
+---
+
+## ⭐ 编辑推荐
+
+<em>**不是按星数排的。** 按星数排的在下面 📈 热门榜。这一栏回答的是另一个问题：**我第一次点进来，该先看哪个。**</em>
+
+| 先看这个 | 为什么先看它 |
+|:--|:--|
+| **[adarshmishra07/jcm-router](https://github.com/adarshmishra07/jcm-router)** <img src="https://img.shields.io/github/stars/adarshmishra07/jcm-router?style=flat&logo=github&label=" alt="stars"> | 本地代理，逐消息选模型和推理档位，会给子智能体选路，但**刻意不碰你已缓存的主对话**。原有的订阅登录照常可用。 |
+| **[tamaratran/jev-pruner](https://github.com/tamaratran/jev-pruner)** <img src="https://img.shields.io/github/stars/tamaratran/jev-pruner?style=flat&logo=github&label=" alt="stars"> | 命令跑完、结果还没送到模型之前，先把冗长的 Bash 输出削掉。省下来的**是真的上下文，不是摘要出来的近似物**。 |
+| **[dbreunig/building-with-jev-skill](https://github.com/dbreunig/building-with-jev-skill)** <img src="https://img.shields.io/github/stars/dbreunig/building-with-jev-skill?style=flat&logo=github&label=" alt="stars"> | 教 agent 怎么「设计 Jev 的问题」而不是怎么调 API：按代码要分支的方式选 primitive、一个问题只问一个属性、共享同一个 state 的问题合并成一次请求，还点明 noul 的 0.5 是「不确定」不是「中等」。明确标了只针对 jev-1.13，模型升版要回去重读 jaggedness 那页。 |
+| **[compozy/yoshi](https://github.com/compozy/yoshi)** <img src="https://img.shields.io/github/stars/compozy/yoshi?style=flat&logo=github&label=" alt="stars"> | 上下文裁剪代理：超过大小闸门才判定一次，然后按验证过的结论做删减，同时保持协议完整。README 里的说法是**量出来的，不是断言的**。 |
+| **[can1357/jegrep](https://github.com/can1357/jegrep)** <img src="https://img.shields.io/github/stars/can1357/jegrep?style=flat&logo=github&label=" alt="stars"> | 自然语言搜代码，但不建 embedding、不建索引、不起常驻进程：每次直接走实时目录树，对每个路径向 Jev 要一个校准过的 yes/no，所以阈值跨批次是可比的。输出是 dirname/file:起-止 行号，能直接粘进编辑器；全仓搜一次约 $0.01–0.03。默认 cascade 不合用的话，src/strategies/ 里还有十来种可插拔探索策略。 |
+| **[Ying-Kai-Liao/jev-browser](https://github.com/Ying-Kai-Liao/jev-browser)** <img src="https://img.shields.io/github/stars/Ying-Kai-Liao/jev-browser?style=flat&logo=github&label=" alt="stars"> | LLM 只说这一步要达成什么，元素、动作、取值和是否完成全由一次 ~300ms 的 Jev 调用决定；42 个真实网站任务对 40 个，零假 done，token 用量 8k vs 557k。 |
+| **[browser-use/jev-ultrafast](https://github.com/browser-use/jev-ultrafast)** <img src="https://img.shields.io/github/stars/browser-use/jev-ultrafast?style=flat&logo=github&label=" alt="stars"> | 用一次类型化判定替代每一步的 LLM 调用。**生态里最大的一次成本削减**——过去每一步要一次完整模型调用，现在只要一次 Jev 调用。 |
+| **[jkudish/jev-mcp](https://github.com/jkudish/jev-mcp)** <img src="https://img.shields.io/github/stars/jkudish/jev-mcp?style=flat&logo=github&label=" alt="stars"> | 十个 typed MCP 工具：逐条核对论断、页面进 context 前先查有没有注入指令、无需 embedding 的重排，单次 150–500ms。值得看的是它写清了 fail-closed 规则——某条概率分布不合法只废掉那一条，其余照常返回。 |
+| **[Mapika/decider](https://github.com/Mapika/decider)** <img src="https://img.shields.io/github/stars/Mapika/decider?style=flat&logo=github&label=" alt="stars"> | System One 的开源复现，真给权重（基于 Qwen3.5 的 2B/4B/35B-A3B，没蒸馏 Jev）。最值钱的是「Limits, stated plainly」那节：JevBench hard 项 ECE 0.30、把规则写进问题在这个尺寸上根本不生效（一句话问题 0.67，一整段规则只有 0.24），连没修好的 regression 都列出来。 |
+| **[fstandhartinger/jevbench](https://github.com/fstandhartinger/jevbench)** <img src="https://img.shields.io/github/stars/fstandhartinger/jevbench?style=flat&logo=github&label=" alt="stars"> | 对 48 个 Jev 类决策模型跑四轴调和平均（智能/校准/速度/成本），220 道难题在任何系统开跑前就冻结加哈希，一半封存不公开。即使不看榜也值得读两点：成本按每千次决策而非每千 token 计价并附算式；以及它点名某参赛模型仅把选项顺序反过来，分数就从 72% 掉到 21%。 |
+| **[kyotofin/tax-doc-classifier](https://github.com/kyotofin/tax-doc-classifier)** <img src="https://img.shields.io/github/stars/kyotofin/tax-doc-classifier?style=flat&logo=github&label=" alt="stars"> | 把生产里的 Sonnet 分类器换掉：每页 $0.00115 vs $0.039、0.5s vs 3.3s、能认 261 种 IRS 表单而不是 30 种。评分很严——置信度低于 0.95 即使答对也算错。 |
+
+---
+
 ## 目录
 
 <a href="#route">🚦 Route & classify</a> · <a href="#guard">🛡 Guard & verify</a> · <a href="#compact">🗜 Compaction & context</a> · <a href="#skills">🧩 Skills & agents</a> · <a href="#score">⚖️ Score & rank</a> · <a href="#code">🔎 Code search & review</a> · <a href="#browser">🌐 Browser & computer use</a> · <a href="#apps">🖥 Apps & interfaces</a> · <a href="#infra">🔌 Infra, SDKs & bridges</a> · <a href="#open">🔬 Open reproductions & alternatives</a> · <a href="#eval">📐 Benchmarks & evaluation</a> · <a href="#domain">🎯 Domain apps</a> · <a href="#hot">📈 热门</a> · <a href="#choose">🧭 怎么选</a>
@@ -213,29 +258,9 @@
 
 ### 关于
 
-这是一个**独立的、非官方**的 Jev 项目精选清单。与 TypeSafe AI 没有隶属关系，
-也没有得到它的背书。
+这是一个**独立的、非官方**的 Jev 项目精选清单，收录 **84 个项目、12 个类别**。
+与 TypeSafe AI 没有隶属关系，也没有得到它的背书。
 
-**它解决什么问题。** 搜 "Jev" 会出来上万个仓库，而其中大部分点进去是空的、
-改名的、或者只是把官方文档抄了一遍。这一个清单的回答不是"Jev 是什么"
-——那是[官方文档](https://docs.typesafe.ai)的活，而且它会变。
-这里回答的是另一个问题：**这么多项目里，我该看哪个、为什么是它。**
-
-**它和别的清单有什么不同。**
-
-- 🔴 **每个条目都写了「为什么是它」** —— 不是从仓库名或描述里抄一句，
-  是真的看过之后写的一句话。写不出这句的，不进列表。
-- 📊 **星数和日期⛔ 不是手写的** —— 页面上的徽章是实时的，排序表由
-  `data/stars.json` 生成。手写的数字第一个月就会错，而我们不会记得去改。
-- 🔍 **死链会被脚本抓出来** —— 仓库没了的话，徽章只会安静地显示
-  `repo not found`，如果没人顺手查，它会一直躺在那儿。`scripts/fetch_stars.py`
-  对每个仓库打一次 API，拿不到的直接报错。
-
-**收录 84 个，覆盖 12 类**；其中 84 个已经写了选它的理由，
-剩下的在补 —— ⭐ **补理由这件事本身就是这个清单的内容**，不是收尾工作。
-
-**关于 Jev**：它是 TypeSafe AI 出的 System One 模型 —— 不生成文本，
-只在一组带类型的选项里做一次判定，几十到几百毫秒返回。
-所有厂商自评的性能数字这里都标注了出处。
-
-MIT 许可。收录标准见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+搜 "Jev" 会出来上万个仓库，大部分点进去是空的、改名的、或者只是把官方文档抄了一遍。
+**这个清单回答的不是「Jev 是什么」**——那是[官方文档](https://docs.typesafe.ai)的活，
+而且它会变。这里回答的是另一个问题：**这么多项目里，我该看哪个、为什么是它。**
