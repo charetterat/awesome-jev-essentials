@@ -29,6 +29,23 @@ def anchors(cats):
         f'<a href="#{c["id"]}">{c["emoji"]} {c["title_en"]}</a>' for c in cats)
 
 
+def cell(s):
+    """Sanitise a string for use inside a markdown table cell.
+
+    🔴 表格单元格里这两样会静默破坏结构：
+      `|`  直接把表格切成两列错位
+      ```  未配对的反引号会把后面整段吞掉 —— 实测 realZachi/pg-jev 那条
+           理由里有 `WHERE jev(tickets,'...')`，结果整条理由在 GitHub 上消失
+    ⛔ 不能靠"写理由时小心点"，理由是人/agent 写的，必须在这里兜住。
+    """
+    if not s:
+        return ""
+    s = s.replace("|", "\\|")
+    if s.count("`") % 2:
+        s = s.replace("`", "'")
+    return s
+
+
 def body(cats, stars, zh):
     """Render the category sections. zh=False → English.
 
@@ -57,7 +74,7 @@ def body(cats, stars, zh):
             if st.get("created"):
                 subs.append((("创建于 " if zh else "created ") + st["created"]))
             if reason:
-                subs.append(reason)
+                subs.append(cell(reason))
             if subs:
                 left += "<br><sub>" + " · ".join(subs) + "</sub>"
             right = (f'<img src="{S(n)}" alt="stars"> '
