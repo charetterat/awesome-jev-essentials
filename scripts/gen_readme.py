@@ -30,7 +30,12 @@ def anchors(cats):
 
 
 def body(cats, stars, zh):
-    """Render the category sections. zh=False → English."""
+    """Render the category sections. zh=False → English.
+
+    🔴 每个块之间必须留空行。GFM 里裸 HTML 块（<h2>…</h2>）会一路吃掉
+    后面的内容直到空行；紧跟其后的 `- **[...]**` 会被整段当成字面文本输出，
+    链接不解析、星号原样显示。实测过：漏一个空行，44 条全变纯文本。
+    """
     out = []
     for c in cats:
         title = c["title_zh"] if zh else c["title_en"]
@@ -51,7 +56,7 @@ def body(cats, stars, zh):
                 line.append(f'  <br>{reason}')
             out.append("\n".join(line))
         out.append("")
-    return "\n".join(out)
+    return "\n\n".join(out)
 
 
 def hot_table(stars, cats, zh=False):
@@ -131,6 +136,7 @@ def render(cats, stars, zh):
 ---
 
 {body(cats, stars, zh)}
+
 <h2 id="hot">{hot_h[3:]}</h2>
 
 <em>{hot_note}</em>
