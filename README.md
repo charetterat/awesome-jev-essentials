@@ -39,29 +39,38 @@ at, and why that one.**
 
 ---
 
-## ⭐ Editor's picks
+## Contents
 
-<em>**Not ranked by stars** — that is the 📈 table further down. This answers a different question: **you just landed here, which one should you open first.**</em>
-
-| Start here | Why this one first |
-|:--|:--|
-| **[adarshmishra07/jcm-router](https://github.com/adarshmishra07/jcm-router)** <img src="https://img.shields.io/github/stars/adarshmishra07/jcm-router?style=flat&logo=github&label=" alt="stars"> | A local proxy that picks model and effort per message, routes subagents, and deliberately leaves your cached main chat alone. Your subscription login keeps working. |
-| **[tamaratran/jev-pruner](https://github.com/tamaratran/jev-pruner)** <img src="https://img.shields.io/github/stars/tamaratran/jev-pruner?style=flat&logo=github&label=" alt="stars"> | Trims noisy Bash output after the command runs but before the result reaches the model — so the saving is real context, not a summarised approximation of it. |
-| **[dbreunig/building-with-jev-skill](https://github.com/dbreunig/building-with-jev-skill)** <img src="https://img.shields.io/github/stars/dbreunig/building-with-jev-skill?style=flat&logo=github&label=" alt="stars"> | The skill that teaches an agent how to write Jev questions rather than how to call the API: pick the primitive your code branches on, split any question weighing two properties, put every question sharing a state into one request, and remember a noul of 0.5 means "unsure" and not "medium". It pins itself to jev-1.13 and tells you to recheck the jaggedness page when the model moves. |
-| **[compozy/yoshi](https://github.com/compozy/yoshi)** <img src="https://img.shields.io/github/stars/compozy/yoshi?style=flat&logo=github&label=" alt="stars"> | Context-pruning proxy that judges once above a size gate and then applies the validated omissions while keeping the protocol intact. The README claims are measured, not asserted. |
-| **[can1357/jegrep](https://github.com/can1357/jegrep)** <img src="https://img.shields.io/github/stars/can1357/jegrep?style=flat&logo=github&label=" alt="stars"> | Natural-language code search with no embeddings, no index and no daemon — it walks the live tree each run and asks Jev for a calibrated yes/no per path, so thresholds actually mean something across batches; output is dirname/file:first-last ranges you can paste into an editor, and a repo-wide search costs $0.01-0.03. Eleven pluggable exploration strategies live in src/strategies/ if the default cascade doesn't suit your tree. |
-| **[Ying-Kai-Liao/jev-browser](https://github.com/Ying-Kai-Liao/jev-browser)** <img src="https://img.shields.io/github/stars/Ying-Kai-Liao/jev-browser?style=flat&logo=github&label=" alt="stars"> | An LLM names the goal for one step; one ~300ms Jev call picks the element, action, value, and done/blocked. 40/42 live-site tasks, no false "done", and ~8k vs ~557k tokens against a Playwright-MCP loop. |
-| **[browser-use/jev-ultrafast](https://github.com/browser-use/jev-ultrafast)** <img src="https://img.shields.io/github/stars/browser-use/jev-ultrafast?style=flat&logo=github&label=" alt="stars"> | A web agent that replaces the per-step LLM call with a typed decision. **Biggest cost cut in the ecosystem** — every step that used to be a full model call is now one Jev call. |
-| **[jkudish/jev-mcp](https://github.com/jkudish/jev-mcp)** <img src="https://img.shields.io/github/stars/jkudish/jev-mcp?style=flat&logo=github&label=" alt="stars"> | Ten typed MCP tools (verify claims against sources, screen a fetched page for injected instructions before it enters context, rerank with no embeddings) at 150–500ms each, with a documented fail-closed contract — one malformed distribution invalidates that claim, not the batch. |
-| **[Mapika/decider](https://github.com/Mapika/decider)** <img src="https://img.shields.io/github/stars/Mapika/decider?style=flat&logo=github&label=" alt="stars"> | An open reproduction of the System One class with actual weights (2B/4B/35B-A3B on Qwen3.5 bases, nothing distilled from Jev), and a "Limits, stated plainly" section that admits the ugly parts: 0.30 top-label ECE on JevBench hard items, rules written into the question simply aren't followed at this size (0.67 for a one-sentence question vs 0.24 for a paragraph of rules), and named regressions it hasn't fixed. |
-| **[fstandhartinger/jevbench](https://github.com/fstandhartinger/jevbench)** <img src="https://img.shields.io/github/stars/fstandhartinger/jevbench?style=flat&logo=github&label=" alt="stars"> | Benchmarks 48 Jev-class decision models on a harmonic mean of Intelligence, Calibration, Speed and Cost, with 220 hard items frozen and hashed before any system ran and half held out sealed. Two things make it worth reading even if you skip the leaderboard: Cost is quoted per 1,000 decisions rather than per 1,000 tokens (with the arithmetic shown), and it flags that one entrant scored 72% vs 21% purely from flipping the option order. |
-| **[kyotofin/tax-doc-classifier](https://github.com/kyotofin/tax-doc-classifier)** <img src="https://img.shields.io/github/stars/kyotofin/tax-doc-classifier?style=flat&logo=github&label=" alt="stars"> | Replaces a production Sonnet page classifier: $0.00115 vs $0.039 a page, ~0.5s vs 3.3s, 261 IRS forms vs 30. Scoring is strict — under 0.95 confidence counts as an error even when the answer is right. |
+| | Category | Count |
+|:--|:--------------------------|--:|
+| 🚦 | <a href="#route">Route & classify</a> | 8 |
+| 🛡 | <a href="#guard">Guard & verify</a> | 7 |
+| 🗜 | <a href="#compact">Compaction & context</a> | 4 |
+| 🧩 | <a href="#skills">Skills & agents</a> | 7 |
+| ⚖️ | <a href="#score">Score & rank</a> | 3 |
+| 🔎 | <a href="#code">Code search & review</a> | 5 |
+| 🌐 | <a href="#browser">Browser & computer use</a> | 4 |
+| 🖥 | <a href="#apps">Apps & interfaces</a> | 8 |
+| 🔌 | <a href="#infra">Infra, SDKs & bridges</a> | 11 |
+| 🔬 | <a href="#open">Open reproductions & alternatives</a> | 10 |
+| 📐 | <a href="#eval">Benchmarks & evaluation</a> | 5 |
+| 🎯 | <a href="#domain">Domain apps</a> | 12 |
+| 📈 | <a href="#hot">Most starred</a> | — |
+| 🧭 | <a href="#choose">How to choose</a> | — |
 
 ---
 
-## Contents
+## ⭐ Editor's picks
 
-<a href="#route">🚦 Route & classify</a> · <a href="#guard">🛡 Guard & verify</a> · <a href="#compact">🗜 Compaction & context</a> · <a href="#skills">🧩 Skills & agents</a> · <a href="#score">⚖️ Score & rank</a> · <a href="#code">🔎 Code search & review</a> · <a href="#browser">🌐 Browser & computer use</a> · <a href="#apps">🖥 Apps & interfaces</a> · <a href="#infra">🔌 Infra, SDKs & bridges</a> · <a href="#open">🔬 Open reproductions & alternatives</a> · <a href="#eval">📐 Benchmarks & evaluation</a> · <a href="#domain">🎯 Domain apps</a> · <a href="#hot">📈 Most starred</a> · <a href="#choose">🧭 How to choose</a>
+<em>**The most widely used entries in the list** (by stars). All 84 are laid out by category below.</em>
+
+| Project | Stars | Why this one |
+|:-----------------------|--------------------:|:--|
+| **[browser-use/jev-ultrafast](https://github.com/browser-use/jev-ultrafast)** | <img src="https://img.shields.io/github/stars/browser-use/jev-ultrafast?style=flat&logo=github&label=" alt="stars"> | A web agent that replaces the per-step LLM call with a typed decision. **Biggest cost cut in the ecosystem** — every step that used to be a full model call is now one Jev call. |
+| **[tamaratran/fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction)** | <img src="https://img.shields.io/github/stars/tamaratran/fast-jev-compaction?style=flat&logo=github&label=" alt="stars"> | A Claude Code plugin that scores every tool call before compaction. Rides an existing user base instead of building one. |
+| **[jaredpalmer/kev](https://github.com/jaredpalmer/kev)** | <img src="https://img.shields.io/github/stars/jaredpalmer/kev?style=flat&logo=github&label=" alt="stars"> | 0.8B/4B/9B models on Qwen3.5 with training code and frozen eval suites; it reports 95% CIs, test sets read once per checkpoint, and says outright that its Jev comparison isn't controlled. |
+| **[jev-chat/jev-chat-jarvis](https://github.com/jev-chat/jev-chat-jarvis)** | <img src="https://img.shields.io/github/stars/jev-chat/jev-chat-jarvis?style=flat&logo=github&label=" alt="stars"> | A phone-side copilot for WeChat / QQ / X / Feishu. Low enough latency to keep up with a live conversation — that is the whole point of System One here. |
+| **[jarrodwatts/jev-trader](https://github.com/jarrodwatts/jev-trader)** | <img src="https://img.shields.io/github/stars/jarrodwatts/jev-trader?style=flat&logo=github&label=" alt="stars"> | One decision per Monad block. Fast enough to sit inside a block, cheap enough to run every time. |
 
 ---
 

@@ -99,25 +99,46 @@ def hot_table(stars, cats, zh=False):
     return "\n".join(out)
 
 
-def editors_picks(stars, zh):
-    """编辑推荐 —— 放在最前面。
+def editors_picks(stars, zh, cats):
+    """编辑推荐 —— 综合星数排序，取前若干个。
 
-    ⛔ 这不是按星数排的。按星数排的那个在下面的 📈 热门榜 ——
-    两个榜要答不同的问题：热门榜答「大家都在看什么」，
-    编辑推荐答「**我该先看哪个**」。混在一起就变成同一个榜了。
+    ⛔ 不是"我们最喜欢的"，是**最多人验证过的这几个**。判据只有一条：
+    星数。⛔ 不要凭印象挑 —— 挑一个几十星的上首页，读者第一眼就会
+    对整份榜单失去信任。这个错误犯过一次。
 
-    ⛔ 也不手写在这里 —— 名字来自 projects.json 里标了 pick 的条目，
-    理由复用条目自己的 reason，所以不可能和条目说的不一致。
+    ⛔ 名单⛔ 不手写在这里：来自 projects.json 里标了 pick 的条目，
+    且这里再按真星数重排一次，所以顺序是算出来的。
     """
-    p = json.load(open(D("data", "projects.json")))
-    picks = [(i["repo"], i["reason_zh" if zh else "reason_en"])
-             for c in p["categories"] for i in c["items"] if i.get("pick")]
-    rows = [("| 先看这个 | 为什么先看它 |" if zh else "| Start here | Why this one first |"),
-            "|:--|:--|"]
-    for n, why in picks:
+    picked = [(i["repo"], i["reason_zh" if zh else "reason_en"])
+              for c in cats for i in c["items"] if i.get("pick")]
+    picked.sort(key=lambda kv: -stars.get(kv[0], {}).get("stars", 0))
+    rows = [("| 项目 | 星数 | 为什么是它 |" if zh else "| Project | Stars | Why this one |"),
+            "|:-----------------------|--------------------:|:--|"]
+    for n, why in picked:
         rows.append(f'| **[{n}](https://github.com/{n})** '
-                    f'<img src="{S(n)}" alt="stars"> | {cell(why)} |')
+                    f'| <img src="{S(n)}" alt="stars"> '
+                    f'| {cell(why)} |')
     return "\n".join(rows)
+
+
+def contents_table(cats, zh):
+    """目录做成表格。
+
+    ⛔ 以前是一长串 `<a>…</a> · <a>…</a>` 内联排下来 —— emoji 紧挨着 emoji，
+    在 GitHub 上的实际换行位置取决于窗口宽度，看着就是一团。
+    表格每一类占一行，左边对齐、右边计数，扫一眼就知道有哪些类、各有几个。
+    """
+    rows = [("| | 分类 | 个数 |" if zh else "| | Category | Count |"),
+            "|:--|:--------------------------|--:|"]
+    for c in cats:
+        t = c["title_zh"] if zh else c["title_en"]
+        rows.append(f'| {c["emoji"]} | <a href="#{c["id"]}">{t}</a> '
+                    f'| {len(c["items"])} |')
+    tail = (f'| 📈 | <a href="#hot">热门项目</a> | — |'
+            f'\n| 🧭 | <a href="#choose">怎么选</a> | — |') if zh else \
+           (f'| 📈 | <a href="#hot">Most starred</a> | — |'
+            f'\n| 🧭 | <a href="#choose">How to choose</a> | — |')
+    return "\n".join(rows) + "\n" + tail
 
 
 def howto(cats, zh):
@@ -149,8 +170,8 @@ def render(cats, stars, zh):
                     f"⛔ 不手写。星数即便脚本没跑也不会过期——徽章是实时的。")
         why_h = "## 🧭 怎么选"
         picks_h = "## ⭐ 编辑推荐"
-        picks_note = ("**不是按星数排的。** 按星数排的在下面 📈 热门榜。"
-                      "这一栏回答的是另一个问题：**我第一次点进来，该先看哪个。**")
+        picks_note = ("**全列表里最多人验证过的几个**（按星数）。"
+                      "完整的 84 条在下面按类别展开。")
         foot = ""
         lang = "**English** · [中文](README.zh-CN.md)"
     else:
@@ -162,9 +183,8 @@ def render(cats, stars, zh):
                     f"⛔ Never hand-edited. Counts cannot go stale — the badges are live.")
         why_h = "## 🧭 How to choose"
         picks_h = "## ⭐ Editor's picks"
-        picks_note = ("**Not ranked by stars** — that is the 📈 table further down. "
-                      "This answers a different question: "
-                      "**you just landed here, which one should you open first.**")
+        picks_note = ("**The most widely used entries in the list** (by stars). "
+                      "All 84 are laid out by category below.")
         foot = ""
         lang = "**English** · [中文](README.zh-CN.md)"
     if zh:
@@ -240,17 +260,17 @@ source. MIT licensed."""
 
 ---
 
+{toc}
+
+{contents_table(cats, zh)}
+
+---
+
 {picks_h}
 
 <em>{picks_note}</em>
 
-{editors_picks(stars, zh)}
-
----
-
-{toc}
-
-{anchors(cats)} · <a href="#hot">📈 {"热门" if zh else "Most starred"}</a> · <a href="#choose">🧭 {"怎么选" if zh else "How to choose"}</a>
+{editors_picks(stars, zh, cats)}
 
 ---
 
