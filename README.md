@@ -11,7 +11,7 @@
 ## What this is
 
 An **independent, unaffiliated** catalog of Jev projects —
-**84 projects across 12 categories**. Not endorsed by,
+**84 projects across 11 categories**. Not endorsed by,
 and not connected to, TypeSafe AI.
 
 Searching for "Jev" returns tens of thousands of repositories, and most of them
@@ -21,21 +21,21 @@ are empty, renamed, or a copy of the official docs. **This list does not answer
 It answers the other question: **of all these projects, which one should I look
 at, and why that one.**
 
-## What updates
+**What makes this one worth trusting:** every entry carries a hand-written
+reason. There is no entry here that we could not say something specific about —
+⭐⭐ **that is the editorial bar, and it is why the list is 84 and not the 10,000+
+that a search returns.**
 
-**This list is maintained, not published once.** Here is exactly what updates:
+<p>
+Not by stars. By <strong>what you are trying to do</strong>.
+</p>
 
-- 🔄 **Stars and last-commit dates are live** — every count on this page is a
-  badge, not a typed number. They change as you watch, so they cannot go stale.
-- 🤖 **The ranking table is regenerated every day** — GitHub Actions runs
-  `scripts/fetch_stars.py` + `scripts/gen_readme.py` at 03:17 UTC to re-sort
-  the 📈 table.
-- 🔍 **Dead links are checked by a script daily** — a deleted or renamed repo
-  gets reported. ⚠️ Without that check this fails *silently*: the badge just
-  says `repo not found`, quietly, forever, unless somebody happens to look.
-- ✍️ **New entries go through the inclusion criteria** — see
-  [CONTRIBUTING.md](CONTRIBUTING.md). The short version: **if we cannot write
-  down why a project is here, it does not go in.**
+| If you want to… | Start with |
+|:--|:--|
+| **If you want to understand Jev** | `browser-use/jev-ultrafast` — the biggest cost cut in the ecosystem; read how the single decision is made. |
+| **If you want to use it tomorrow** | `tamaratran/fast-jev-compaction` for Claude Code, `Ying-Kai-Liao/jev-browser` for browser work. |
+| **If you want to run it yourself** | `Mapika/decider` — open weights, and a 「limits, stated plainly」 section. |
+| **If you want to build on it** | start from `kerpopule/hermes-jev-skills`; the loop is already wired. |
 
 ---
 
@@ -43,38 +43,23 @@ at, and why that one.**
 
 | | Category | Count |
 |:--|:--------------------------|--:|
-| 🚦 | <a href="#route">Route & classify</a> | 8 |
+| 🚦 | <a href="#route">Route & classify</a> | 9 |
 | 🛡 | <a href="#guard">Guard & verify</a> | 7 |
-| 🗜 | <a href="#compact">Compaction & context</a> | 4 |
+| 🗜 | <a href="#compact">Compaction & context</a> | 5 |
 | 🧩 | <a href="#skills">Skills & agents</a> | 7 |
-| ⚖️ | <a href="#score">Score & rank</a> | 3 |
 | 🔎 | <a href="#code">Code search & review</a> | 5 |
 | 🌐 | <a href="#browser">Browser & computer use</a> | 4 |
-| 🖥 | <a href="#apps">Apps & interfaces</a> | 8 |
-| 🔌 | <a href="#infra">Infra, SDKs & bridges</a> | 11 |
+| 🖥 | <a href="#apps">Apps & interfaces</a> | 9 |
+| 🔌 | <a href="#infra">Infra, SDKs & bridges</a> | 12 |
 | 🔬 | <a href="#open">Open reproductions & alternatives</a> | 10 |
 | 📐 | <a href="#eval">Benchmarks & evaluation</a> | 5 |
-| 🎯 | <a href="#domain">Domain apps</a> | 12 |
+| 🎯 | <a href="#domain">Domain apps</a> | 11 |
 | 📈 | <a href="#hot">Most starred</a> | — |
 | 🧭 | <a href="#choose">How to choose</a> | — |
 
 ---
 
-## ⭐ Editor's picks
-
-<em>**The most widely used entries in the list** (by stars). All 84 are laid out by category below.</em>
-
-| Project | Stars | Why this one |
-|:-----------------------|--------------------:|:--|
-| **[browser-use/jev-ultrafast](https://github.com/browser-use/jev-ultrafast)** | <img src="https://img.shields.io/github/stars/browser-use/jev-ultrafast?style=flat&logo=github&label=" alt="stars"> | A web agent that replaces the per-step LLM call with a typed decision. **Biggest cost cut in the ecosystem** — every step that used to be a full model call is now one Jev call. |
-| **[tamaratran/fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction)** | <img src="https://img.shields.io/github/stars/tamaratran/fast-jev-compaction?style=flat&logo=github&label=" alt="stars"> | A Claude Code plugin that scores every tool call before compaction. Rides an existing user base instead of building one. |
-| **[jaredpalmer/kev](https://github.com/jaredpalmer/kev)** | <img src="https://img.shields.io/github/stars/jaredpalmer/kev?style=flat&logo=github&label=" alt="stars"> | 0.8B/4B/9B models on Qwen3.5 with training code and frozen eval suites; it reports 95% CIs, test sets read once per checkpoint, and says outright that its Jev comparison isn't controlled. |
-| **[jev-chat/jev-chat-jarvis](https://github.com/jev-chat/jev-chat-jarvis)** | <img src="https://img.shields.io/github/stars/jev-chat/jev-chat-jarvis?style=flat&logo=github&label=" alt="stars"> | A phone-side copilot for WeChat / QQ / X / Feishu. Low enough latency to keep up with a live conversation — that is the whole point of System One here. |
-| **[jarrodwatts/jev-trader](https://github.com/jarrodwatts/jev-trader)** | <img src="https://img.shields.io/github/stars/jarrodwatts/jev-trader?style=flat&logo=github&label=" alt="stars"> | One decision per Monad block. Fast enough to sit inside a block, cheap enough to run every time. |
-
----
-
-<h2 id="route">🚦 Route & classify <sub>8</sub></h2>
+<h2 id="route">🚦 Route & classify <sub>9</sub></h2>
 
 <p><em>Deciding what a request is, before deciding what to do with it.</em></p>
 
@@ -88,6 +73,7 @@ at, and why that one.**
 | **[jekozyra/pi-typesafe-router](https://github.com/jekozyra/pi-typesafe-router)**<br><sub>created 2026-09-18 · One sentence, one job: classify the request, route it to the right model. The README's second line warns you not to run it alongside another automatic router.</sub> | <img src="https://img.shields.io/github/stars/jekozyra/pi-typesafe-router?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/jekozyra/pi-typesafe-router?style=flat&logo=github&label=" alt="updated"> |
 | **[adarshmishra07/jcm-router](https://github.com/adarshmishra07/jcm-router)**<br><sub>created 2026-09-17 · A local proxy that picks model and effort per message, routes subagents, and deliberately leaves your cached main chat alone. Your subscription login keeps working.</sub> | <img src="https://img.shields.io/github/stars/adarshmishra07/jcm-router?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/adarshmishra07/jcm-router?style=flat&logo=github&label=" alt="updated"> |
 | **[mejiasd3v/pi-jev-router](https://github.com/mejiasd3v/pi-jev-router)**<br><sub>created 2026-09-17 · Smallest useful version: Jev picks the model once per session and the choice stays fixed. No per-turn churn — which is the right default if you dislike a model changing under you.</sub> | <img src="https://img.shields.io/github/stars/mejiasd3v/pi-jev-router?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/mejiasd3v/pi-jev-router?style=flat&logo=github&label=" alt="updated"> |
+| **[ruban-24/switchboard](https://github.com/ruban-24/switchboard)**<br><sub>created 2026-09-20 · Model-agnostic routing driven by your own policy: Jev assesses the task, your rules decide what that assessment means. Separating judgement from policy is the right shape.</sub> | <img src="https://img.shields.io/github/stars/ruban-24/switchboard?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/ruban-24/switchboard?style=flat&logo=github&label=" alt="updated"> |
 
 <h2 id="guard">🛡 Guard & verify <sub>7</sub></h2>
 
@@ -103,7 +89,7 @@ at, and why that one.**
 | **[DanRWilloughby/snifftest](https://github.com/DanRWilloughby/snifftest)**<br><sub>created 2026-09-17 · Prose linter for AI writing tells: zero dependencies, countable rules, plus one judgment model for the calls a rule cannot make. A clean example of mixing deterministic checks with a model.</sub> | <img src="https://img.shields.io/github/stars/DanRWilloughby/snifftest?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/DanRWilloughby/snifftest?style=flat&logo=github&label=" alt="updated"> |
 | **[GhalebDweikat/winnow](https://github.com/GhalebDweikat/winnow)**<br><sub>created 2026-09-16 · A Claude Code hook that splits every big tool result into ~25-line blocks, asks Jev one yes/no per block in a single batched call, and replaces confident-no blocks with a recallable stub — and it publishes the replay numbers that don't flatter it: ECE 0.14 vs 0.31 for a lexical baseline, 86ms median, $0.036 for 300 cases, plus a calibration table where the observed need rate never drops below 0.26 even in Jev's 0.07 bin. It reports ECE next to ROC AUC specifically because a judge that always answers the base rate scores a great ECE and hides nothing.</sub> | <img src="https://img.shields.io/github/stars/GhalebDweikat/winnow?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/GhalebDweikat/winnow?style=flat&logo=github&label=" alt="updated"> |
 
-<h2 id="compact">🗜 Compaction & context <sub>4</sub></h2>
+<h2 id="compact">🗜 Compaction & context <sub>5</sub></h2>
 
 <p><em>Deciding what to throw away when the window fills up.</em></p>
 
@@ -113,6 +99,7 @@ at, and why that one.**
 | **[tamaratran/jev-pruner](https://github.com/tamaratran/jev-pruner)**<br><sub>created 2026-09-18 · Trims noisy Bash output after the command runs but before the result reaches the model — so the saving is real context, not a summarised approximation of it.</sub> | <img src="https://img.shields.io/github/stars/tamaratran/jev-pruner?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/tamaratran/jev-pruner?style=flat&logo=github&label=" alt="updated"> |
 | **[joelhooks/pi-fast-jev-compaction](https://github.com/joelhooks/pi-fast-jev-compaction)**<br><sub>created 2026-09-18 · Keeps conversation text verbatim while pruning stale tool history, and says so plainly: layer 1 only — it does not summarise, rewrite, or invent memory.</sub> | <img src="https://img.shields.io/github/stars/joelhooks/pi-fast-jev-compaction?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/joelhooks/pi-fast-jev-compaction?style=flat&logo=github&label=" alt="updated"> |
 | **[leonaaardob/fast-dev-compaction](https://github.com/leonaaardob/fast-dev-compaction)**<br><sub>created 2026-09-18 · Port of the Claude Code compaction plugin to Codex lifecycle hooks: score every tool call, compact, then re-inject the verbatim history Jev chose to keep.</sub> | <img src="https://img.shields.io/github/stars/leonaaardob/fast-dev-compaction?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/leonaaardob/fast-dev-compaction?style=flat&logo=github&label=" alt="updated"> |
+| **[compozy/yoshi](https://github.com/compozy/yoshi)**<br><sub>created 2026-09-18 · Context-pruning proxy that judges once above a size gate and then applies the validated omissions while keeping the protocol intact. The README claims are measured, not asserted.</sub> | <img src="https://img.shields.io/github/stars/compozy/yoshi?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/compozy/yoshi?style=flat&logo=github&label=" alt="updated"> |
 
 <h2 id="skills">🧩 Skills & agents <sub>7</sub></h2>
 
@@ -127,16 +114,6 @@ at, and why that one.**
 | **[dbreunig/building-with-jev-skill](https://github.com/dbreunig/building-with-jev-skill)**<br><sub>created 2026-09-17 · The skill that teaches an agent how to write Jev questions rather than how to call the API: pick the primitive your code branches on, split any question weighing two properties, put every question sharing a state into one request, and remember a noul of 0.5 means "unsure" and not "medium". It pins itself to jev-1.13 and tells you to recheck the jaggedness page when the model moves.</sub> | <img src="https://img.shields.io/github/stars/dbreunig/building-with-jev-skill?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/dbreunig/building-with-jev-skill?style=flat&logo=github&label=" alt="updated"> |
 | **[kitze/skillbox](https://github.com/kitze/skillbox)**<br><sub>created 2026-09-17 · A self-hosted, versioned skills library served over MCP, where Jev is used for one narrow job — scoring your active skill catalog against the current task so the right skills surface. Worth reading for the provider plumbing alone: TypeSafe direct, Vercel AI Gateway or OpenRouter's /alpha/decisions endpoint, catalog batched at 32 skills / 24KB under an 8-second deadline, and a failed batch falls back wholesale rather than returning a partial ranking.</sub> | <img src="https://img.shields.io/github/stars/kitze/skillbox?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/kitze/skillbox?style=flat&logo=github&label=" alt="updated"> |
 | **[altryne/jevify](https://github.com/altryne/jevify)**<br><sub>created 2026-09-17 · A skill with two modes: during ordinary work it pushes the agent to hand bulk semantic judgments (scan a long doc, rank candidates, check many items) to Jev before pulling text into its reasoning context; say "jevify this codebase" and it hunts for repeated LLM judgments and fragile semantic heuristics worth replacing, and writes the actual questions. The README is upfront that it's a community skill, not a TypeSafe product, and that installing it does not intercept tool output automatically.</sub> | <img src="https://img.shields.io/github/stars/altryne/jevify?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/altryne/jevify?style=flat&logo=github&label=" alt="updated"> |
-
-<h2 id="score">⚖️ Score & rank <sub>3</sub></h2>
-
-<p><em>Turning a judgement into a number you can sort by.</em></p>
-
-| Project | Stars · Updated |
-|:--------------------------------------------------------|--------------------:|
-| **[ruban-24/switchboard](https://github.com/ruban-24/switchboard)**<br><sub>created 2026-09-20 · Model-agnostic routing driven by your own policy: Jev assesses the task, your rules decide what that assessment means. Separating judgement from policy is the right shape.</sub> | <img src="https://img.shields.io/github/stars/ruban-24/switchboard?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/ruban-24/switchboard?style=flat&logo=github&label=" alt="updated"> |
-| **[compozy/yoshi](https://github.com/compozy/yoshi)**<br><sub>created 2026-09-18 · Context-pruning proxy that judges once above a size gate and then applies the validated omissions while keeping the protocol intact. The README claims are measured, not asserted.</sub> | <img src="https://img.shields.io/github/stars/compozy/yoshi?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/compozy/yoshi?style=flat&logo=github&label=" alt="updated"> |
-| **[shiftynick/jev-axi](https://github.com/shiftynick/jev-axi)**<br><sub>created 2026-09-16 · An agent-ergonomic CLI over Jev: pick, rate, check, rank, triage, guard — the six shapes a typed decision actually takes, exposed as shell commands.</sub> | <img src="https://img.shields.io/github/stars/shiftynick/jev-axi?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/shiftynick/jev-axi?style=flat&logo=github&label=" alt="updated"> |
 
 <h2 id="code">🔎 Code search & review <sub>5</sub></h2>
 
@@ -161,7 +138,7 @@ at, and why that one.**
 | **[moritzkremb/jev-voice-browser](https://github.com/moritzkremb/jev-voice-browser)**<br><sub>created 2026-09-17 · One Jev call per partial transcript carries ~10 typed questions in parallel — including "is this addressed to me?" and "is it destructive?" — so it acts mid-sentence. Measured 34/34, ~330ms, $0.01 a demo.</sub> | <img src="https://img.shields.io/github/stars/moritzkremb/jev-voice-browser?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/moritzkremb/jev-voice-browser?style=flat&logo=github&label=" alt="updated"> |
 | **[jkudish/jev-browser](https://github.com/jkudish/jev-browser)**<br><sub>created 2026-09-17 · Jev picks one action per step and separately scores "goal met" and "stuck"; code owns budgets and stop gates. Wikipedia Coffee→Espresso in ~4s for $0.0016, and it states plainly what redaction can't cover.</sub> | <img src="https://img.shields.io/github/stars/jkudish/jev-browser?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/jkudish/jev-browser?style=flat&logo=github&label=" alt="updated"> |
 
-<h2 id="apps">🖥 Apps & interfaces <sub>8</sub></h2>
+<h2 id="apps">🖥 Apps & interfaces <sub>9</sub></h2>
 
 <p><em>Finished things you can open and use.</em></p>
 
@@ -175,8 +152,9 @@ at, and why that one.**
 | **[AboveColin/HA-Jev](https://github.com/AboveColin/HA-Jev)**<br><sub>created 2026-09-17 · Turns Jev's answers into Home Assistant sensors, so an automation can read a probability like any other number. A nice reminder that a decision model needs no chat UI.</sub> | <img src="https://img.shields.io/github/stars/AboveColin/HA-Jev?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/AboveColin/HA-Jev?style=flat&logo=github&label=" alt="updated"> |
 | **[thruwire/foreman](https://github.com/thruwire/foreman)**<br><sub>created 2026-09-17 · Puts a fast decision model above slower coding agents: feed it a ticket or a bug report and it decides who does what next.</sub> | <img src="https://img.shields.io/github/stars/thruwire/foreman?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/thruwire/foreman?style=flat&logo=github&label=" alt="updated"> |
 | **[Silbercue/public-browser](https://github.com/Silbercue/public-browser)**<br><sub>created 2026-04-07 · Lets Claude Code and Cursor drive your real logged-in Chrome, and reports the delta it measured: fewer tokens, fewer tool calls, fewer tool definitions.</sub> | <img src="https://img.shields.io/github/stars/Silbercue/public-browser?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/Silbercue/public-browser?style=flat&logo=github&label=" alt="updated"> |
+| **[shiftynick/jev-axi](https://github.com/shiftynick/jev-axi)**<br><sub>created 2026-09-16 · An agent-ergonomic CLI over Jev: pick, rate, check, rank, triage, guard — the six shapes a typed decision actually takes, exposed as shell commands.</sub> | <img src="https://img.shields.io/github/stars/shiftynick/jev-axi?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/shiftynick/jev-axi?style=flat&logo=github&label=" alt="updated"> |
 
-<h2 id="infra">🔌 Infra, SDKs & bridges <sub>11</sub></h2>
+<h2 id="infra">🔌 Infra, SDKs & bridges <sub>12</sub></h2>
 
 <p><em>Getting Jev into the stack you already have.</em></p>
 
@@ -193,6 +171,7 @@ at, and why that one.**
 | **[itsmostafa/typesafe-mcp](https://github.com/itsmostafa/typesafe-mcp)**<br><sub>created 2026-09-17 · A single static Go binary with no Node or Python runtime; `evaluate setup mcp` finds and registers itself with Claude Code, Claude Desktop, Codex and pi in one command. Takes up to 100 records per call, and one bad record doesn't take down the rest.</sub> | <img src="https://img.shields.io/github/stars/itsmostafa/typesafe-mcp?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/itsmostafa/typesafe-mcp?style=flat&logo=github&label=" alt="updated"> |
 | **[vinilana/jev-gateway](https://github.com/vinilana/jev-gateway)**<br><sub>created 2026-09-18 · A local proxy that pulls just the tool-choice step out of Codex/Claude Code/OpenCode and gives it to Jev; when every argument is an enum or boolean it builds the call itself with no LLM request at all. Fails open to passthrough, and admits the Gemini path has never been run live.</sub> | <img src="https://img.shields.io/github/stars/vinilana/jev-gateway?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/vinilana/jev-gateway?style=flat&logo=github&label=" alt="updated"> |
 | **[peterfriese/jev-foundation-models](https://github.com/peterfriese/jev-foundation-models)**<br><sub>created 2026-09-21 · A Swift 6 package that makes Jev a drop-in provider behind Apple's LanguageModelSession, so a @Generable struct's Bool/enum/@Guide(.range) fields map straight onto noul/choice/score and come back in 40-150ms with probabilities in response.metadata. It also opens with a blunt warning never to ship the API key in an app binary — route through your own backend.</sub> | <img src="https://img.shields.io/github/stars/peterfriese/jev-foundation-models?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/peterfriese/jev-foundation-models?style=flat&logo=github&label=" alt="updated"> |
+| **[cline/plugins](https://github.com/cline/plugins)**<br><sub>created 2026-05-31 · Cline's official plugin index, and one of its curated entries is a browser plugin that deliberately runs with no LLM in the loop. Worth watching as an integration surface.</sub> | <img src="https://img.shields.io/github/stars/cline/plugins?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/cline/plugins?style=flat&logo=github&label=" alt="updated"> |
 
 <h2 id="open">🔬 Open reproductions & alternatives <sub>10</sub></h2>
 
@@ -223,7 +202,7 @@ at, and why that one.**
 | **[danielgshea/jev-as-a-judge](https://github.com/danielgshea/jev-as-a-judge)**<br><sub>created 2026-09-17 · Froze five agent runs and had each judge re-score them 100 times: Jev matched every human pass/fail label (Claude Sonnet 4.6 hit 80%), with 92–913x less score variance and $0.34 total cost against $28.17. The authors keep saying out loud that it's five cases and one human reviewer.</sub> | <img src="https://img.shields.io/github/stars/danielgshea/jev-as-a-judge?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/danielgshea/jev-as-a-judge?style=flat&logo=github&label=" alt="updated"> |
 | **[sutro-sh/jev-align](https://github.com/sutro-sh/jev-align)**<br><sub>created 2026-09-19 · An active-learning loop: it surfaces the rows Jev is least certain about, you label them, GEPA rewrites the function definition — and a higher training score never auto-accepts a proposal, you do. Shared functions carry the labels but not your raw rows.</sub> | <img src="https://img.shields.io/github/stars/sutro-sh/jev-align?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/sutro-sh/jev-align?style=flat&logo=github&label=" alt="updated"> |
 
-<h2 id="domain">🎯 Domain apps <sub>12</sub></h2>
+<h2 id="domain">🎯 Domain apps <sub>11</sub></h2>
 
 <p><em>Jev pointed at one specific problem.</em></p>
 
@@ -231,7 +210,6 @@ at, and why that one.**
 |:--------------------------------------------------------|--------------------:|
 | **[Hangzhi/diffusion-jev-sglang](https://github.com/Hangzhi/diffusion-jev-sglang)**<br><sub>created 2026-09-21 · A diffusion model that runs Jev-style typed decisions on images — guess the doodle, name the flower, pick an emoji. Whether Jev's shape generalises past text, tested.</sub> | <img src="https://img.shields.io/github/stars/Hangzhi/diffusion-jev-sglang?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/Hangzhi/diffusion-jev-sglang?style=flat&logo=github&label=" alt="updated"> |
 | **[shitianfang/jev-use](https://github.com/shitianfang/jev-use)**<br><sub>created 2026-09-19 · Hands the agent steps that need no text output to Jev, with the numbers stated up front: p50 around 230 ms. Chinese docs.</sub> | <img src="https://img.shields.io/github/stars/shitianfang/jev-use?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/shitianfang/jev-use?style=flat&logo=github&label=" alt="updated"> |
-| **[cline/plugins](https://github.com/cline/plugins)**<br><sub>created 2026-05-31 · Cline's official plugin index, and one of its curated entries is a browser plugin that deliberately runs with no LLM in the loop. Worth watching as an integration surface.</sub> | <img src="https://img.shields.io/github/stars/cline/plugins?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/cline/plugins?style=flat&logo=github&label=" alt="updated"> |
 | **[kyotofin/tax-doc-classifier](https://github.com/kyotofin/tax-doc-classifier)**<br><sub>created 2026-09-18 · Replaces a production Sonnet page classifier: $0.00115 vs $0.039 a page, ~0.5s vs 3.3s, 261 IRS forms vs 30. Scoring is strict — under 0.95 confidence counts as an error even when the answer is right.</sub> | <img src="https://img.shields.io/github/stars/kyotofin/tax-doc-classifier?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/kyotofin/tax-doc-classifier?style=flat&logo=github&label=" alt="updated"> |
 | **[jerryjliu/docjev](https://github.com/jerryjliu/docjev)**<br><sub>created 2026-09-19 · Classifies and splits multi-document PDF packets from locally extracted text. Its 40-document benchmark honestly reports the loss: Jev ties on classification (40/40) but splits 7/8 packets against Luna's 8/8.</sub> | <img src="https://img.shields.io/github/stars/jerryjliu/docjev?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/jerryjliu/docjev?style=flat&logo=github&label=" alt="updated"> |
 | **[realZachi/pg-jev](https://github.com/realZachi/pg-jev)**<br><sub>created 2026-09-17 · A Postgres extension that makes `WHERE jev(tickets,'the customer is angry')` an ordinary boolean function. The batching writeup is the payoff: 20 rows/request is 100% correct, 40 drops to 92–98%, 80 to 77–94%.</sub> | <img src="https://img.shields.io/github/stars/realZachi/pg-jev?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/realZachi/pg-jev?style=flat&logo=github&label=" alt="updated"> |
@@ -242,9 +220,9 @@ at, and why that one.**
 | **[bytelabs-oss/clash-jev](https://github.com/bytelabs-oss/clash-jev)**<br><sub>created 2026-09-21 · Plays Clash Royale on a real Android phone over adb with zero trained policy — OpenCV plus a hand-labelled troop classifier builds a JSON state once a second, then Jev answers three chained questions (strategy, card, square) in ~135 ms each, about $0.004 a match. The design table is the best part: they deliberately refuse to filter unaffordable cards or inject counter lists, because when the state listed counters the right card jumped from a coin-flip to 98% — that number measured the author, not the model.</sub> | <img src="https://img.shields.io/github/stars/bytelabs-oss/clash-jev?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/bytelabs-oss/clash-jev?style=flat&logo=github&label=" alt="updated"> |
 | **[trungdq88/youtube-sponsor-detection](https://github.com/trungdq88/youtube-sponsor-detection)**<br><sub>created 2026-09-17 · Skips YouTube sponsor reads with Jev never touching a timestamp: the transcript is rendered as `L042\|` lines, Jev picks line IDs in 80-line windows, and code maps them back to seconds. Three modes with published cost per hour watched (under a cent for transcript-only, $0.46 for pure listen-by-ear), a deliberate bias toward watching an extra second rather than cutting content, and an eval harness scored against SponsorBlock labels for recall, precision and boundary error.</sub> | <img src="https://img.shields.io/github/stars/trungdq88/youtube-sponsor-detection?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/trungdq88/youtube-sponsor-detection?style=flat&logo=github&label=" alt="updated"> |
 
-<h2 id="hot">📈 Most starred (ranked automatically)</h2>
+<h2 id="hot">📈 Most starred (raw data, auto-sorted)</h2>
 
-<em>Generated by `scripts/gen_readme.py` from `data/stars.json`. ⛔ Never hand-edited. Counts cannot go stale — the badges are live.</em>
+<em>Star count says how many people bookmarked something, **not whether it works**. This ordering is nothing but that number. To pick one, use the table above.</em>
 
 | # | Project | Stars | Created |
 |--:|:--------------------------|--------------------:|------------------:|
@@ -261,20 +239,12 @@ at, and why that one.**
 
 ---
 
-<h2 id="choose">🧭 How to choose</h2>
-
-**Want to understand Jev** → `browser-use/jev-ultrafast`. The biggest cost cut in the ecosystem — read how the single decision is made.
-
-**Want to use it tomorrow** → `tamaratran/fast-jev-compaction` for Claude Code, `browser-use/jev-ultrafast` for browser automation.
-
-**Want to ship your own** → start from `kerpopule/hermes-jev-skills`; the loop is already wired.
-
 ---
 
 ### About
 
 An **independent, unaffiliated** catalog of Jev projects —
-**84 projects across 12 categories**. Not endorsed by,
+**84 projects across 11 categories**. Not endorsed by,
 and not connected to, TypeSafe AI.
 
 Searching for "Jev" returns tens of thousands of repositories, and most of them
@@ -283,3 +253,22 @@ are empty, renamed, or a copy of the official docs. **This list does not answer
 [official documentation](https://docs.typesafe.ai), and it changes.
 It answers the other question: **of all these projects, which one should I look
 at, and why that one.**
+
+**What makes this one worth trusting:** every entry carries a hand-written
+reason. There is no entry here that we could not say something specific about —
+⭐⭐ **that is the editorial bar, and it is why the list is 84 and not the 10,000+
+that a search returns.**
+
+### What updates
+
+**This list is maintained, not published once.** Here is what changes:
+
+- 🔄 **Stars and last-commit dates are live.** Every count on this page is a
+  badge, not a typed number, so it is never out of date.
+- 📈 **The ranking table is re-sorted every day.** New projects climb, stale
+  ones fall, on their own.
+- 🔍 **Dead links get removed.** Deleted and renamed repos are caught
+  automatically — ⚠️ without that, a dead entry just sits there looking fine.
+- ✍️ **New entries have to earn their place.** See
+  [CONTRIBUTING.md](CONTRIBUTING.md). The short version: **if we cannot say why
+  a project is on this list, it does not go on.**
