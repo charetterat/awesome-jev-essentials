@@ -241,6 +241,10 @@ text — it returns a single decision over a set of typed options, in tens to
 hundreds of milliseconds. Vendor-reported performance numbers are cited to their
 source. MIT licensed."""
     return f"""<p align="center">
+  <img src=".github/logo.png" alt="" width="96" height="96">
+</p>
+
+<p align="center">
   <img src="assets/banner.svg" alt="awesome-jev-essentials" width="100%">
 </p>
 

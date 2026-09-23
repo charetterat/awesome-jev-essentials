@@ -1,4 +1,8 @@
 <p align="center">
+  <img src=".github/logo.png" alt="" width="96" height="96">
+</p>
+
+<p align="center">
   <img src="assets/banner.svg" alt="awesome-jev-essentials" width="100%">
 </p>
 
