@@ -1,0 +1,6 @@
+# 本项目不依赖任何第三方库。stdlib only:
+#   urllib.request  — 调 GitHub API
+#   json            — 读写 data/*.json
+#   re, os, html, datetime
+# 装这个文件本身不会做任何事，它在这里是为了说清楚这一点。
+# 跑脚本需要 python3.6+，以及一个 GitHub token（见 scripts/fetch_stars.py）。

@@ -1,0 +1,354 @@
+{
+  "gargpratyush/jev-router": {
+    "stars": 355,
+    "created": "2026-09-16",
+    "pushed": "2026-09-19",
+    "lang": "JavaScript",
+    "desc": "Route to the cheapest model in claude code for your task using jev-router",
+    "archived": false
+  },
+  "prismhq/jev-router": {
+    "stars": 10,
+    "created": "2026-09-17",
+    "pushed": "2026-09-17",
+    "lang": "Python",
+    "desc": "Open-source LLM router that uses TypeSafe's Jev to pick a model, on top of LiteLLM",
+    "archived": false
+  },
+  "miniLV/Jev-Auto-Router": {
+    "stars": 6,
+    "created": "2026-08-01",
+    "pushed": "2026-09-20",
+    "lang": "TypeScript",
+    "desc": "Jev Auto Router (Jev Router): experimental per-call GPT model routing for Codex via TypeSafe Jev and a local Responses proxy, with independent task verification",
+    "archived": false
+  },
+  "shimo4228/jev-skill-router": {
+    "stars": 1,
+    "created": "2026-09-21",
+    "pushed": "2026-09-21",
+    "lang": "Python",
+    "desc": "Claude Code plugin: asks TypeSafe Jev which installed skill fits each prompt and logs the answer (shadow-first). A working reference for the skill-suggestion co",
+    "archived": false
+  },
+  "GodsBoy/jev-agent-skill-router": {
+    "stars": 17,
+    "created": "2026-09-16",
+    "pushed": "2026-09-16",
+    "lang": "Python",
+    "desc": "Typed, confidence-aware agent skill routing with TypeSafe Jev.",
+    "archived": false
+  },
+  "jekozyra/pi-typesafe-router": {
+    "stars": 0,
+    "created": "2026-09-18",
+    "pushed": "2026-09-22",
+    "lang": "TypeScript",
+    "desc": "",
+    "archived": false
+  },
+  "adarshmishra07/jcm-router": {
+    "stars": 4,
+    "created": "2026-09-17",
+    "pushed": "2026-09-17",
+    "lang": "TypeScript",
+    "desc": "Local proxy that picks the Claude model and effort per message using TypeSafe Jev. Routes subagents, leaves your cached main chat alone.",
+    "archived": false
+  },
+  "mejiasd3v/pi-jev-router": {
+    "stars": 13,
+    "created": "2026-09-17",
+    "pushed": "2026-09-22",
+    "lang": "JavaScript",
+    "desc": "Automatic model routing for Pi using TypeSafe's Jev through Vercel AI Gateway",
+    "archived": false
+  },
+  "leepokai/jev-guard": {
+    "stars": 27,
+    "created": "2026-09-17",
+    "pushed": "2026-09-17",
+    "lang": "JavaScript",
+    "desc": "Auto mode for every coding agent, built on Jev: risk-scores every tool call with session context (deny / ask / allow), flags prompt injection in results, checks",
+    "archived": false
+  },
+  "y0usaf/pi-jev": {
+    "stars": 140,
+    "created": "2026-09-16",
+    "pushed": "2026-09-22",
+    "lang": "TypeScript",
+    "desc": "TypeSafe Jev as a decision layer for the Pi coding agent: a measured tool-call gate plus jev_ask for typed, calibrated answers",
+    "archived": false
+  },
+  "qkal/Canny": {
+    "stars": 54,
+    "created": "2026-09-11",
+    "pushed": "2026-09-22",
+    "lang": "TypeScript",
+    "desc": "Stops AI coding agents from claiming work is done without evidence. Deterministic hooks decide, TypeSafe's Jev advises. Append-only ledger, zero runtime depende",
+    "archived": false
+  },
+  "jesset/pi-verdict": {
+    "stars": 10,
+    "created": "2026-08-25",
+    "pushed": "2026-09-21",
+    "lang": "TypeScript",
+    "desc": "A minimal  permission gate for Pi in the style of Claude Code's auto mode",
+    "archived": false
+  },
+  "raihankhan-rk/diffjury": {
+    "stars": 5,
+    "created": "2026-09-17",
+    "pushed": "2026-09-22",
+    "lang": "TypeScript",
+    "desc": "DiffJury — TypeSafe Jev PR risk router + code review coach",
+    "archived": false
+  },
+  "DanRWilloughby/snifftest": {
+    "stars": 29,
+    "created": "2026-09-17",
+    "pushed": "2026-09-18",
+    "lang": "TypeScript",
+    "desc": "A prose linter that sniffs out AI writing tells. Zero dependencies, countable rules plus one judgment model.",
+    "archived": false
+  },
+  "tamaratran/fast-jev-compaction": {
+    "stars": 6460,
+    "created": "2026-09-17",
+    "pushed": "2026-09-18",
+    "lang": "TypeScript",
+    "desc": "Claude Code plugin that replaces the compaction summary with Jev decisions: every tool call and result is scored in one fast request, stale ones are dropped or ",
+    "archived": false
+  },
+  "tamaratran/jev-pruner": {
+    "stars": 140,
+    "created": "2026-09-18",
+    "pushed": "2026-09-23",
+    "lang": "TypeScript",
+    "desc": "Claude Code plugin: trim long Bash output with TypeSafe Jev before the model sees it",
+    "archived": false
+  },
+  "joelhooks/pi-fast-jev-compaction": {
+    "stars": 11,
+    "created": "2026-09-18",
+    "pushed": "2026-09-18",
+    "lang": "TypeScript",
+    "desc": "Pi extension: verbatim context compaction with TypeSafe Jev decisions",
+    "archived": false
+  },
+  "leonaaardob/fast-dev-compaction": {
+    "stars": 4,
+    "created": "2026-09-18",
+    "pushed": "2026-09-19",
+    "lang": "TypeScript",
+    "desc": "Codex plugin: verbatim Jev-guided context restoration around session compaction. Port of tamaratran/fast-jev-compaction to Codex lifecycle hooks.",
+    "archived": false
+  },
+  "safzanpirani/pi-jev-skill-picker": {
+    "stars": 29,
+    "created": "2026-09-20",
+    "pushed": "2026-09-20",
+    "lang": "TypeScript",
+    "desc": "Rank Pi Agent Skills for the current task with TypeSafe Jev",
+    "archived": false
+  },
+  "yuyang2230/jev-agent-skill": {
+    "stars": 0,
+    "created": "2026-09-19",
+    "pushed": "2026-09-19",
+    "lang": "Python",
+    "desc": "Free typed judgments for AI agents: offload classify/screen/score/verify to Jev (TypeSafe System One) via OpenCode Zen. Claude Code / ZCode skill. 给AI代理省token的免",
+    "archived": false
+  },
+  "HyunjunJeon/pi-quiet-ask": {
+    "stars": 11,
+    "created": "2026-09-17",
+    "pushed": "2026-09-18",
+    "lang": "TypeScript",
+    "desc": "TypeSafe Jev as the pi coding agent's quiet decision layer",
+    "archived": false
+  },
+  "kerpopule/hermes-jev-skills": {
+    "stars": 672,
+    "created": "2026-09-18",
+    "pushed": "2026-09-22",
+    "lang": "Python",
+    "desc": "Jev-powered model routing, memory, compaction, skill selection, computer and browser use for Hermes agents (also Claude Code and Codex)",
+    "archived": false
+  },
+  "ruban-24/switchboard": {
+    "stars": 4,
+    "created": "2026-09-20",
+    "pushed": "2026-09-22",
+    "lang": "TypeScript",
+    "desc": "An open-source, model-agnostic decision router for Claude Code and Codex.",
+    "archived": false
+  },
+  "compozy/yoshi": {
+    "stars": 25,
+    "created": "2026-09-18",
+    "pushed": "2026-09-18",
+    "lang": "TypeScript",
+    "desc": "Context-pruning proxy for Claude Code and Codex: Jev judges which history is still needed, measured not claimed. POC here now, heading soon into https://github.",
+    "archived": false
+  },
+  "shiftynick/jev-axi": {
+    "stars": 19,
+    "created": "2026-09-16",
+    "pushed": "2026-09-19",
+    "lang": "TypeScript",
+    "desc": "Agent-ergonomic CLI for TypeSafe's Jev: fast calibrated judgments (pick, rate, check, rank, triage, guard) from the shell",
+    "archived": false
+  },
+  "browser-use/jev-ultrafast": {
+    "stars": 18679,
+    "created": "2026-09-16",
+    "pushed": "2026-09-18",
+    "lang": "Python",
+    "desc": "Fastest and cheapest web agent",
+    "archived": false
+  },
+  "jev-chat/jev-chat-jarvis": {
+    "stars": 4927,
+    "created": "2026-09-21",
+    "pushed": "2026-09-23",
+    "lang": "Kotlin",
+    "desc": "装在手机上的对话副驾：在微信 / QQ / X / 飞书里读懂对方、给出候选回复、一键填入输入框，发不发由你。非侵入，只读屏幕，不 hook 不改包。",
+    "archived": false
+  },
+  "jarrodwatts/jev-trader": {
+    "stars": 2128,
+    "created": "2026-09-16",
+    "pushed": "2026-09-17",
+    "lang": "TypeScript",
+    "desc": "One AI trade decision every Monad block. Jev on Kuru MON-USDC.",
+    "archived": false
+  },
+  "Sac-Y/Jev-cu": {
+    "stars": 585,
+    "created": "2026-09-18",
+    "pushed": "2026-09-22",
+    "lang": "JavaScript",
+    "desc": "",
+    "archived": false
+  },
+  "yikangy873-gif/jev-desktop": {
+    "stars": 63,
+    "created": "2026-09-19",
+    "pushed": "2026-09-19",
+    "lang": "JavaScript",
+    "desc": "TypeSafe Jev action selection inside Codex Computer Use",
+    "archived": false
+  },
+  "AboveColin/HA-Jev": {
+    "stars": 53,
+    "created": "2026-09-17",
+    "pushed": "2026-09-23",
+    "lang": "Python",
+    "desc": "Ask your house a question, get a number back. Home Assistant integration for TypeSafe Jev: typed answers as sensors, four actions for automations, and a convers",
+    "archived": false
+  },
+  "thruwire/foreman": {
+    "stars": 525,
+    "created": "2026-09-17",
+    "pushed": "2026-09-22",
+    "lang": "Python",
+    "desc": "Software factory foreman based on TypeSafe's Jev model",
+    "archived": false
+  },
+  "Silbercue/public-browser": {
+    "stars": 12,
+    "created": "2026-04-07",
+    "pushed": "2026-09-21",
+    "lang": "TypeScript",
+    "desc": "Lets Claude Code and Cursor drive Chrome. Browse your real profile: -30% tokens, -25% cost, -41% tool calls, -34% tool defs, +40% faster. Direct CDP, a11y-tree ",
+    "archived": false
+  },
+  "burnigtm/jev-mcp": {
+    "stars": 38,
+    "created": "2026-09-17",
+    "pushed": "2026-09-21",
+    "lang": "TypeScript",
+    "desc": "MCP server that puts TypeSafe Jev on the coding loop in Cursor, Codex, and any MCP client",
+    "archived": false
+  },
+  "tacticocc/Jevbridge": {
+    "stars": 40,
+    "created": "2026-09-18",
+    "pushed": "2026-09-21",
+    "lang": "TypeScript",
+    "desc": "ACP and MCP adapter that bridges TypeSafe Jev with any LLM — computer use and typed decisions alongside Codex, Claude, Grok, and OpenCode.",
+    "archived": false
+  },
+  "valentynkit/jev-belay": {
+    "stars": 18,
+    "created": "2026-09-18",
+    "pushed": "2026-09-20",
+    "lang": "JavaScript",
+    "desc": "Claude Code Stop hook that blocks an unverified done: reads the transcript for evidence, asks Jev once, fails open on everything else",
+    "archived": false
+  },
+  "gtaras7/typesafe-jev": {
+    "stars": 6,
+    "created": "2026-09-17",
+    "pushed": "2026-09-17",
+    "lang": "TypeScript",
+    "desc": "Screen a folder of CVs with the TypeSafe Jev decision model: typed judgments, an editable policy, free re-scoring.",
+    "archived": false
+  },
+  "legacybridge-tech/pi-typesafe-jev": {
+    "stars": 2,
+    "created": "2026-09-17",
+    "pushed": "2026-09-17",
+    "lang": "TypeScript",
+    "desc": "A pi extension that exposes TypeSafe (Jev, System One) judgments as five pi tools, so a model can make narrow semantic judgments while your code and your users ",
+    "archived": false
+  },
+  "GiesN/typesafe-jev-workflow": {
+    "stars": 9,
+    "created": "2026-09-16",
+    "pushed": "2026-09-16",
+    "lang": "Python",
+    "desc": "",
+    "archived": false
+  },
+  "TypeSafeAI/typesafe-playground": {
+    "stars": 20,
+    "created": "2026-09-16",
+    "pushed": "2026-09-23",
+    "lang": "TypeScript",
+    "desc": "Community TypeSafe AI playground: 110 use cases, games, dilemmas and model challenges, with editable prompts, A/B comparisons and a mobile-friendly UI.",
+    "archived": false
+  },
+  "Hangzhi/diffusion-jev-sglang": {
+    "stars": 1,
+    "created": "2026-09-21",
+    "pushed": "2026-09-22",
+    "lang": "Python",
+    "desc": "A Jev-like decision engine powered by DiffusionGemma and SGLang. Jev with eyes. ",
+    "archived": false
+  },
+  "usenotra/notra": {
+    "stars": 213,
+    "created": "2025-12-13",
+    "pushed": "2026-09-23",
+    "lang": "TypeScript",
+    "desc": "Turn Your Work Into Content",
+    "archived": false
+  },
+  "shitianfang/jev-use": {
+    "stars": 22,
+    "created": "2026-09-19",
+    "pushed": "2026-09-22",
+    "lang": "JavaScript",
+    "desc": "Claude Code / Codex / pi plugin that hands agent steps needing no text output to Jev (TypeSafe's judgment model) — measured p50 ~230 ms and ~$0.02 per 1,000 jud",
+    "archived": false
+  },
+  "cline/plugins": {
+    "stars": 31,
+    "created": "2026-05-31",
+    "pushed": "2026-09-18",
+    "lang": "TypeScript",
+    "desc": "Official curated plugins for Cline CLI and extensions",
+    "archived": false
+  }
+}

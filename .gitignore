@@ -1,0 +1,8 @@
+# 本仓的所有产物都是提交进 git 的 —— README 和 banner 由 data/ 生成，
+# 它们必须能被看见，否则 clone 下来 README 是空的。
+# 所以这里只忽略真正的临时文件：
+__pycache__/
+*.pyc
+.DS_Store
+*.sync-conflict-*
+.venv/

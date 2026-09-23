@@ -1,0 +1,306 @@
+{
+  "repo": "awesome-jev-essentials",
+  "updated": null,
+  "categories": [
+    {
+      "id": "route",
+      "emoji": "🚦",
+      "title_en": "Route & classify",
+      "title_zh": "路由与分类",
+      "note_en": "Deciding what a request is, before deciding what to do with it.",
+      "note_zh": "先判断这是什么请求，再决定怎么处理。",
+      "items": [
+        {
+          "repo": "gargpratyush/jev-router",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "prismhq/jev-router",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "miniLV/Jev-Auto-Router",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "shimo4228/jev-skill-router",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "GodsBoy/jev-agent-skill-router",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "jekozyra/pi-typesafe-router",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "adarshmishra07/jcm-router",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "mejiasd3v/pi-jev-router",
+          "reason_en": null,
+          "reason_zh": null
+        }
+      ]
+    },
+    {
+      "id": "guard",
+      "emoji": "🛡",
+      "title_en": "Guard & verify",
+      "title_zh": "守门与验证",
+      "note_en": "Catching bad actions — and bad claims — before they land.",
+      "note_zh": "在坏动作（和坏结论）落地前拦住它。",
+      "items": [
+        {
+          "repo": "leepokai/jev-guard",
+          "reason_en": "Scores every tool call before it runs. Small and single-purpose — the right size for a guardrail.",
+          "reason_zh": "每次工具调用执行前先打分。小而专一——护栏就该是这个体量。"
+        },
+        {
+          "repo": "y0usaf/pi-jev",
+          "reason_en": "A tool-call gate that people have actually tested. The most cited starting point in this category.",
+          "reason_zh": "一个真被人测过的工具调用闸门，是这一类里被引用最多的起点。"
+        },
+        {
+          "repo": "qkal/Canny",
+          "reason_en": "Stops an agent claiming it's done without evidence. Guards against bad **claims**, not bad actions — a failure mode most guardrails ignore.",
+          "reason_zh": "拦住智能体拿不出证据就说「做完了」。它防的是坏**结论**而不是坏动作——这是大多数护栏都没管的失败模式。"
+        },
+        {
+          "repo": "jesset/pi-verdict",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "raihankhan-rk/diffjury",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "DanRWilloughby/snifftest",
+          "reason_en": null,
+          "reason_zh": null
+        }
+      ]
+    },
+    {
+      "id": "compact",
+      "emoji": "🗜",
+      "title_en": "Compaction & context",
+      "title_zh": "压缩与上下文",
+      "note_en": "Deciding what to throw away when the window fills up.",
+      "note_zh": "窗口满了，决定丢掉什么。",
+      "items": [
+        {
+          "repo": "tamaratran/fast-jev-compaction",
+          "reason_en": "A Claude Code plugin that scores every tool call before compaction. Rides an existing user base instead of building one.",
+          "reason_zh": "一个 Claude Code 插件，压缩前先给每次工具调用打分。它蹭的是现成的用户群，而不是自己攒一个。"
+        },
+        {
+          "repo": "tamaratran/jev-pruner",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "joelhooks/pi-fast-jev-compaction",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "leonaaardob/fast-dev-compaction",
+          "reason_en": null,
+          "reason_zh": null
+        }
+      ]
+    },
+    {
+      "id": "skills",
+      "emoji": "🧩",
+      "title_en": "Skills & agents",
+      "title_zh": "技能与智能体",
+      "note_en": "Pieces you plug into an agent loop, not finished apps.",
+      "note_zh": "插进智能体回路里的零件，不是成品应用。",
+      "items": [
+        {
+          "repo": "safzanpirani/pi-jev-skill-picker",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "yuyang2230/jev-agent-skill",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "HyunjunJeon/pi-quiet-ask",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "kerpopule/hermes-jev-skills",
+          "reason_en": "Routing, memory, compaction and skill selection. The most complete example of Jev inside an agent loop rather than bolted on the side.",
+          "reason_zh": "路由、记忆、压缩、技能选择全都有。是把 Jev 放进智能体回路里（而不是挂在旁边）最完整的一个例子。"
+        }
+      ]
+    },
+    {
+      "id": "score",
+      "emoji": "⚖️",
+      "title_en": "Score & rank",
+      "title_zh": "打分与排序",
+      "note_en": "Turning a judgement into a number you can sort by.",
+      "note_zh": "把判断变成一个能排序的数字。",
+      "items": [
+        {
+          "repo": "ruban-24/switchboard",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "compozy/yoshi",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "shiftynick/jev-axi",
+          "reason_en": null,
+          "reason_zh": null
+        }
+      ]
+    },
+    {
+      "id": "apps",
+      "emoji": "🖥",
+      "title_en": "Apps & interfaces",
+      "title_zh": "应用与界面",
+      "note_en": "Finished things you can open and use.",
+      "note_zh": "能直接打开用的成品。",
+      "items": [
+        {
+          "repo": "browser-use/jev-ultrafast",
+          "reason_en": "A web agent that replaces the per-step LLM call with a typed decision. **Biggest cost cut in the ecosystem** — every step that used to be a full model call is now one Jev call.",
+          "reason_zh": "用一次类型化判定替代每一步的 LLM 调用。**生态里最大的一次成本削减**——过去每一步要一次完整模型调用，现在只要一次 Jev 调用。"
+        },
+        {
+          "repo": "jev-chat/jev-chat-jarvis",
+          "reason_en": "A phone-side copilot for WeChat / QQ / X / Feishu. Low enough latency to keep up with a live conversation — that is the whole point of System One here.",
+          "reason_zh": "手机端的微信 / QQ / X / 飞书副驾。延迟低到能跟上真人对话——这正是 System One 在这里的意义。"
+        },
+        {
+          "repo": "jarrodwatts/jev-trader",
+          "reason_en": "One decision per Monad block. Fast enough to sit inside a block, cheap enough to run every time.",
+          "reason_zh": "每个 Monad 区块做一次决策。快到能塞进一个区块里，便宜到能每次都跑。"
+        },
+        {
+          "repo": "Sac-Y/Jev-cu",
+          "reason_en": "Computer use. The closest thing here to a general desktop agent.",
+          "reason_zh": "电脑操作（computer use）。这里最接近通用桌面智能体的一个。"
+        },
+        {
+          "repo": "yikangy873-gif/jev-desktop",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "AboveColin/HA-Jev",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "thruwire/foreman",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "Silbercue/public-browser",
+          "reason_en": null,
+          "reason_zh": null
+        }
+      ]
+    },
+    {
+      "id": "infra",
+      "emoji": "🔌",
+      "title_en": "Infra, SDKs & bridges",
+      "title_zh": "基础设施、SDK 与桥接",
+      "note_en": "Getting Jev into the stack you already have.",
+      "note_zh": "把 Jev 接进你现有的技术栈。",
+      "items": [
+        {
+          "repo": "burnigtm/jev-mcp",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "tacticocc/Jevbridge",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "valentynkit/jev-belay",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "gtaras7/typesafe-jev",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "legacybridge-tech/pi-typesafe-jev",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "GiesN/typesafe-jev-workflow",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "TypeSafeAI/typesafe-playground",
+          "reason_en": "110 use cases you can edit and run in the browser. Zero install — the fastest way to feel the latency difference for yourself.",
+          "reason_zh": "110 个用例，能直接在浏览器里改和跑。零安装——想亲手感受延迟差异，这是最快的路径。"
+        }
+      ]
+    },
+    {
+      "id": "domain",
+      "emoji": "🎯",
+      "title_en": "Domain apps",
+      "title_zh": "垂直应用",
+      "note_en": "Jev pointed at one specific problem.",
+      "note_zh": "Jev 对准某一个具体问题。",
+      "items": [
+        {
+          "repo": "Hangzhi/diffusion-jev-sglang",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "usenotra/notra",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "shitianfang/jev-use",
+          "reason_en": null,
+          "reason_zh": null
+        },
+        {
+          "repo": "cline/plugins",
+          "reason_en": null,
+          "reason_zh": null
+        }
+      ]
+    }
+  ]
+}
