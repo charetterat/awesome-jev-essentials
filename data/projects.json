@@ -49,6 +49,11 @@
           "repo": "mejiasd3v/pi-jev-router",
           "reason_en": "Smallest useful version: Jev picks the model once per session and the choice stays fixed. No per-turn churn — which is the right default if you dislike a model changing under you.",
           "reason_zh": "最小可用版：Jev 每个会话选一次模型，然后固定住。不做逐轮切换——如果你不喜欢模型在自己脚下被换掉，这是更合理的默认。"
+        },
+        {
+          "repo": "ruban-24/switchboard",
+          "reason_en": "Model-agnostic routing driven by your own policy: Jev assesses the task, your rules decide what that assessment means. Separating judgement from policy is the right shape.",
+          "reason_zh": "由你自己的策略驱动的模型选择：Jev 只做任务评估，**如何解读这个评估由你的规则决定**。把判断和策略分开，这个形状是对的。"
         }
       ]
     },
@@ -125,6 +130,11 @@
           "repo": "leonaaardob/fast-dev-compaction",
           "reason_en": "Port of the Claude Code compaction plugin to Codex lifecycle hooks: score every tool call, compact, then re-inject the verbatim history Jev chose to keep.",
           "reason_zh": "把 Claude Code 那个压缩插件移植到 Codex 的生命周期钩子上：给每次工具调用打分、压缩、再把 Jev 判定要留的原样历史重新注入。"
+        },
+        {
+          "repo": "compozy/yoshi",
+          "reason_en": "Context-pruning proxy that judges once above a size gate and then applies the validated omissions while keeping the protocol intact. The README claims are measured, not asserted.",
+          "reason_zh": "上下文裁剪代理：超过大小闸门才判定一次，然后按验证过的结论做删减，同时保持协议完整。README 里的说法是**量出来的，不是断言的**。"
         }
       ]
     },
@@ -170,31 +180,6 @@
           "repo": "altryne/jevify",
           "reason_en": "A skill with two modes: during ordinary work it pushes the agent to hand bulk semantic judgments (scan a long doc, rank candidates, check many items) to Jev before pulling text into its reasoning context; say \"jevify this codebase\" and it hunts for repeated LLM judgments and fragile semantic heuristics worth replacing, and writes the actual questions. The README is upfront that it's a community skill, not a TypeSafe product, and that installing it does not intercept tool output automatically.",
           "reason_zh": "两种用法：日常干活时，它让 agent 把批量语义判断（扫长文档、排候选、逐条检查）先丢给 Jev，再把选中的证据读进推理上下文；直接说「jevify 这个代码库」，它会去找重复的 LLM 判断和脆弱的语义启发式，并把该换成 Jev 的问题写出来。README 也说清了这是社区 skill、不是 TypeSafe 官方产品，装了也不会自动拦截 tool 输出。"
-        }
-      ]
-    },
-    {
-      "id": "score",
-      "emoji": "⚖️",
-      "title_en": "Score & rank",
-      "title_zh": "打分与排序",
-      "note_en": "Turning a judgement into a number you can sort by.",
-      "note_zh": "把判断变成一个能排序的数字。",
-      "items": [
-        {
-          "repo": "ruban-24/switchboard",
-          "reason_en": "Model-agnostic routing driven by your own policy: Jev assesses the task, your rules decide what that assessment means. Separating judgement from policy is the right shape.",
-          "reason_zh": "由你自己的策略驱动的模型选择：Jev 只做任务评估，**如何解读这个评估由你的规则决定**。把判断和策略分开，这个形状是对的。"
-        },
-        {
-          "repo": "compozy/yoshi",
-          "reason_en": "Context-pruning proxy that judges once above a size gate and then applies the validated omissions while keeping the protocol intact. The README claims are measured, not asserted.",
-          "reason_zh": "上下文裁剪代理：超过大小闸门才判定一次，然后按验证过的结论做删减，同时保持协议完整。README 里的说法是**量出来的，不是断言的**。"
-        },
-        {
-          "repo": "shiftynick/jev-axi",
-          "reason_en": "An agent-ergonomic CLI over Jev: pick, rate, check, rank, triage, guard — the six shapes a typed decision actually takes, exposed as shell commands.",
-          "reason_zh": "给智能体用的 Jev 命令行：选、评、查、排、分流、守门——类型化判定实际就那么几种形状，它把这几种做成了 shell 命令。"
         }
       ]
     },
@@ -313,6 +298,11 @@
           "repo": "Silbercue/public-browser",
           "reason_en": "Lets Claude Code and Cursor drive your real logged-in Chrome, and reports the delta it measured: fewer tokens, fewer tool calls, fewer tool definitions.",
           "reason_zh": "让 Claude Code 和 Cursor 驱动你**真的已经登录**的 Chrome，并给出实测差值：token 更少、工具调用更少、工具定义也更少。"
+        },
+        {
+          "repo": "shiftynick/jev-axi",
+          "reason_en": "An agent-ergonomic CLI over Jev: pick, rate, check, rank, triage, guard — the six shapes a typed decision actually takes, exposed as shell commands.",
+          "reason_zh": "给智能体用的 Jev 命令行：选、评、查、排、分流、守门——类型化判定实际就那么几种形状，它把这几种做成了 shell 命令。"
         }
       ]
     },
@@ -378,6 +368,11 @@
           "repo": "peterfriese/jev-foundation-models",
           "reason_en": "A Swift 6 package that makes Jev a drop-in provider behind Apple's LanguageModelSession, so a @Generable struct's Bool/enum/@Guide(.range) fields map straight onto noul/choice/score and come back in 40-150ms with probabilities in response.metadata. It also opens with a blunt warning never to ship the API key in an app binary — route through your own backend.",
           "reason_zh": "用 Swift 6 把 Jev 接成 Apple Foundation Models 的 model provider：@Generable 结构里的 Bool / enum / @Guide(.range) 直接对应 noul / choice / score，40-150ms 返回，还能从 metadata 拿到概率。README 开头就警告别把 API key 打进 App 包，要走自己的后端。"
+        },
+        {
+          "repo": "cline/plugins",
+          "reason_en": "Cline's official plugin index, and one of its curated entries is a browser plugin that deliberately runs with no LLM in the loop. Worth watching as an integration surface.",
+          "reason_zh": "Cline 的官方插件索引，其中一条精选插件是**刻意不在回路里放 LLM** 的浏览器插件。它是一条值得盯着的集成面。"
         }
       ]
     },
@@ -494,11 +489,6 @@
           "repo": "shitianfang/jev-use",
           "reason_en": "Hands the agent steps that need no text output to Jev, with the numbers stated up front: p50 around 230 ms. Chinese docs.",
           "reason_zh": "把智能体那些不需要产出文本的步骤交给 Jev，而且数字直接摆在开头：p50 约 230 毫秒。中文文档。"
-        },
-        {
-          "repo": "cline/plugins",
-          "reason_en": "Cline's official plugin index, and one of its curated entries is a browser plugin that deliberately runs with no LLM in the loop. Worth watching as an integration surface.",
-          "reason_zh": "Cline 的官方插件索引，其中一条精选插件是**刻意不在回路里放 LLM** 的浏览器插件。它是一条值得盯着的集成面。"
         },
         {
           "repo": "kyotofin/tax-doc-classifier",

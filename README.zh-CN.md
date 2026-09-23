@@ -10,26 +10,26 @@
 
 ## 这是什么
 
-这是一个**独立的、非官方**的 Jev 项目精选清单，收录 **84 个项目、12 个类别**。
+这是一个**独立的、非官方**的 Jev 项目精选清单，收录 **84 个项目、11 个类别**。
 与 TypeSafe AI 没有隶属关系，也没有得到它的背书。
 
 搜 "Jev" 会出来上万个仓库，大部分点进去是空的、改名的、或者只是把官方文档抄了一遍。
 **这个清单回答的不是「Jev 是什么」**——那是[官方文档](https://docs.typesafe.ai)的活，
 而且它会变。这里回答的是另一个问题：**这么多项目里，我该看哪个、为什么是它。**
 
-## 会更新什么
+**凭什么信这份清单**：**每一条都配了一句手写的「为什么是它」。**
+说不出这句的就不进来 —— ⭐⭐ **清单是 84 条而不是搜出来的上万条，差的就是这一条。**
 
-**这份清单会持续更新。** 说清楚它更新什么、不更新什么：
+<p>
+不按星数排。这里按<strong>你想干什么</strong>分。
+</p>
 
-- 🔄 **星数和最近更新日期是实时的** —— 页面上全部是徽章，不是写死的数字，
-  每次打开都会变。⛔ 也因此永远不会过期。
-- 🤖 **排序表每天自动重算** —— 每天 03:17 由 GitHub Actions 跑
-  `scripts/fetch_stars.py` + `scripts/gen_readme.py` 重排 📈 热门榜。
-- 🔍 **死链每天被脚本查一遍** —— 仓库被删或改名会被直接报出来。
-  ⚠️ 这一条不加脚本的话会**静默失败**：徽章只是安静地显示 `repo not found`，
-  没人顺手去查的话它会一直躺在那儿。
-- ✍️ **新条目要过收录标准** —— 见 [CONTRIBUTING.md](CONTRIBUTING.md)。
-  一句话概括：**写不出「为什么是它」的项目不进列表。**
+| 你要是…… | 从这里开始 |
+|:--|:--|
+| **想搞懂 Jev 到底在干什么** | `browser-use/jev-ultrafast` —— 生态里最大的一次成本削减，看那一次判定怎么做出来的。 |
+| **想明天就能用上** | Claude Code 上用 `tamaratran/fast-jev-compaction`，浏览器操作上 `Ying-Kai-Liao/jev-browser`。 |
+| **想不依赖官方 API 自己跑** | `Mapika/decider` —— 真给权重，而且自己写了「哪里不行」那一节。 |
+| **想自己做一个** | 从 `kerpopule/hermes-jev-skills` 起步，回路已经接好了。 |
 
 ---
 
@@ -37,38 +37,23 @@
 
 | | 分类 | 个数 |
 |:--|:--------------------------|--:|
-| 🚦 | <a href="#route">路由与分类</a> | 8 |
+| 🚦 | <a href="#route">路由与分类</a> | 9 |
 | 🛡 | <a href="#guard">守门与验证</a> | 7 |
-| 🗜 | <a href="#compact">压缩与上下文</a> | 4 |
+| 🗜 | <a href="#compact">压缩与上下文</a> | 5 |
 | 🧩 | <a href="#skills">技能与智能体</a> | 7 |
-| ⚖️ | <a href="#score">打分与排序</a> | 3 |
 | 🔎 | <a href="#code">代码搜索与评审</a> | 5 |
 | 🌐 | <a href="#browser">浏览器与电脑操作</a> | 4 |
-| 🖥 | <a href="#apps">应用与界面</a> | 8 |
-| 🔌 | <a href="#infra">基础设施、SDK 与桥接</a> | 11 |
+| 🖥 | <a href="#apps">应用与界面</a> | 9 |
+| 🔌 | <a href="#infra">基础设施、SDK 与桥接</a> | 12 |
 | 🔬 | <a href="#open">开源复现与替代</a> | 10 |
 | 📐 | <a href="#eval">评测与基准</a> | 5 |
-| 🎯 | <a href="#domain">垂直应用</a> | 12 |
+| 🎯 | <a href="#domain">垂直应用</a> | 11 |
 | 📈 | <a href="#hot">热门项目</a> | — |
 | 🧭 | <a href="#choose">怎么选</a> | — |
 
 ---
 
-## ⭐ 编辑推荐
-
-<em>**全列表里最多人验证过的几个**（按星数）。完整的 84 条在下面按类别展开。</em>
-
-| 项目 | 星数 | 为什么是它 |
-|:-----------------------|--------------------:|:--|
-| **[browser-use/jev-ultrafast](https://github.com/browser-use/jev-ultrafast)** | <img src="https://img.shields.io/github/stars/browser-use/jev-ultrafast?style=flat&logo=github&label=" alt="stars"> | 用一次类型化判定替代每一步的 LLM 调用。**生态里最大的一次成本削减**——过去每一步要一次完整模型调用，现在只要一次 Jev 调用。 |
-| **[tamaratran/fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction)** | <img src="https://img.shields.io/github/stars/tamaratran/fast-jev-compaction?style=flat&logo=github&label=" alt="stars"> | 一个 Claude Code 插件，压缩前先给每次工具调用打分。它蹭的是现成的用户群，而不是自己攒一个。 |
-| **[jaredpalmer/kev](https://github.com/jaredpalmer/kev)** | <img src="https://img.shields.io/github/stars/jaredpalmer/kev?style=flat&logo=github&label=" alt="stars"> | 0.8B/4B/9B 三个尺寸，训练代码和冻结评测集都给；报 95% 置信区间、测试集每个 checkpoint 只读一次，还直说和 Jev 的对比不是受控实验。 |
-| **[jev-chat/jev-chat-jarvis](https://github.com/jev-chat/jev-chat-jarvis)** | <img src="https://img.shields.io/github/stars/jev-chat/jev-chat-jarvis?style=flat&logo=github&label=" alt="stars"> | 手机端的微信 / QQ / X / 飞书副驾。延迟低到能跟上真人对话——这正是 System One 在这里的意义。 |
-| **[jarrodwatts/jev-trader](https://github.com/jarrodwatts/jev-trader)** | <img src="https://img.shields.io/github/stars/jarrodwatts/jev-trader?style=flat&logo=github&label=" alt="stars"> | 每个 Monad 区块做一次决策。快到能塞进一个区块里，便宜到能每次都跑。 |
-
----
-
-<h2 id="route">🚦 路由与分类 <sub>8</sub></h2>
+<h2 id="route">🚦 路由与分类 <sub>9</sub></h2>
 
 <p><em>先判断这是什么请求，再决定怎么处理。</em></p>
 
@@ -82,6 +67,7 @@
 | **[jekozyra/pi-typesafe-router](https://github.com/jekozyra/pi-typesafe-router)**<br><sub>创建于 2026-09-18 · 一句话一个职责：判断请求类型，路由到对应模型。README 第二行就提醒你——别和别的自动路由器同时开。</sub> | <img src="https://img.shields.io/github/stars/jekozyra/pi-typesafe-router?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/jekozyra/pi-typesafe-router?style=flat&logo=github&label=" alt="updated"> |
 | **[adarshmishra07/jcm-router](https://github.com/adarshmishra07/jcm-router)**<br><sub>创建于 2026-09-17 · 本地代理，逐消息选模型和推理档位，会给子智能体选路，但**刻意不碰你已缓存的主对话**。原有的订阅登录照常可用。</sub> | <img src="https://img.shields.io/github/stars/adarshmishra07/jcm-router?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/adarshmishra07/jcm-router?style=flat&logo=github&label=" alt="updated"> |
 | **[mejiasd3v/pi-jev-router](https://github.com/mejiasd3v/pi-jev-router)**<br><sub>创建于 2026-09-17 · 最小可用版：Jev 每个会话选一次模型，然后固定住。不做逐轮切换——如果你不喜欢模型在自己脚下被换掉，这是更合理的默认。</sub> | <img src="https://img.shields.io/github/stars/mejiasd3v/pi-jev-router?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/mejiasd3v/pi-jev-router?style=flat&logo=github&label=" alt="updated"> |
+| **[ruban-24/switchboard](https://github.com/ruban-24/switchboard)**<br><sub>创建于 2026-09-20 · 由你自己的策略驱动的模型选择：Jev 只做任务评估，**如何解读这个评估由你的规则决定**。把判断和策略分开，这个形状是对的。</sub> | <img src="https://img.shields.io/github/stars/ruban-24/switchboard?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/ruban-24/switchboard?style=flat&logo=github&label=" alt="updated"> |
 
 <h2 id="guard">🛡 守门与验证 <sub>7</sub></h2>
 
@@ -97,7 +83,7 @@
 | **[DanRWilloughby/snifftest](https://github.com/DanRWilloughby/snifftest)**<br><sub>创建于 2026-09-17 · 查「AI 味」的文稿检查器：零依赖、规则可数，只在规则判断不了的地方加一次模型判定。**确定性检查 + 模型判断**怎么配合，这里是个干净的例子。</sub> | <img src="https://img.shields.io/github/stars/DanRWilloughby/snifftest?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/DanRWilloughby/snifftest?style=flat&logo=github&label=" alt="updated"> |
 | **[GhalebDweikat/winnow](https://github.com/GhalebDweikat/winnow)**<br><sub>创建于 2026-09-16 · Claude Code 的 hook：把每个大 tool result 切成约 25 行一块，一次批量问 Jev 每块「这次任务用得上吗」，判定用不上的换成可随时取回的 stub。难得的是它把不好看的实测也贴出来——ECE 0.14 对基线 0.31、中位 86ms、300 个 case 花 $0.036，校准表里 Jev 给 0.07 的那一档实际需要率仍有 0.26；而且坚持 ECE 和 ROC AUC 并排报，因为只会答基准率的判官 ECE 很漂亮却什么都藏不掉。</sub> | <img src="https://img.shields.io/github/stars/GhalebDweikat/winnow?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/GhalebDweikat/winnow?style=flat&logo=github&label=" alt="updated"> |
 
-<h2 id="compact">🗜 压缩与上下文 <sub>4</sub></h2>
+<h2 id="compact">🗜 压缩与上下文 <sub>5</sub></h2>
 
 <p><em>窗口满了，决定丢掉什么。</em></p>
 
@@ -107,6 +93,7 @@
 | **[tamaratran/jev-pruner](https://github.com/tamaratran/jev-pruner)**<br><sub>创建于 2026-09-18 · 命令跑完、结果还没送到模型之前，先把冗长的 Bash 输出削掉。省下来的**是真的上下文，不是摘要出来的近似物**。</sub> | <img src="https://img.shields.io/github/stars/tamaratran/jev-pruner?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/tamaratran/jev-pruner?style=flat&logo=github&label=" alt="updated"> |
 | **[joelhooks/pi-fast-jev-compaction](https://github.com/joelhooks/pi-fast-jev-compaction)**<br><sub>创建于 2026-09-18 · 对话正文原样保留，只清理过期的工具调用记录。而且说得很直白：**只做第一层**——不摘要、不改写、不编造记忆。</sub> | <img src="https://img.shields.io/github/stars/joelhooks/pi-fast-jev-compaction?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/joelhooks/pi-fast-jev-compaction?style=flat&logo=github&label=" alt="updated"> |
 | **[leonaaardob/fast-dev-compaction](https://github.com/leonaaardob/fast-dev-compaction)**<br><sub>创建于 2026-09-18 · 把 Claude Code 那个压缩插件移植到 Codex 的生命周期钩子上：给每次工具调用打分、压缩、再把 Jev 判定要留的原样历史重新注入。</sub> | <img src="https://img.shields.io/github/stars/leonaaardob/fast-dev-compaction?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/leonaaardob/fast-dev-compaction?style=flat&logo=github&label=" alt="updated"> |
+| **[compozy/yoshi](https://github.com/compozy/yoshi)**<br><sub>创建于 2026-09-18 · 上下文裁剪代理：超过大小闸门才判定一次，然后按验证过的结论做删减，同时保持协议完整。README 里的说法是**量出来的，不是断言的**。</sub> | <img src="https://img.shields.io/github/stars/compozy/yoshi?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/compozy/yoshi?style=flat&logo=github&label=" alt="updated"> |
 
 <h2 id="skills">🧩 技能与智能体 <sub>7</sub></h2>
 
@@ -121,16 +108,6 @@
 | **[dbreunig/building-with-jev-skill](https://github.com/dbreunig/building-with-jev-skill)**<br><sub>创建于 2026-09-17 · 教 agent 怎么「设计 Jev 的问题」而不是怎么调 API：按代码要分支的方式选 primitive、一个问题只问一个属性、共享同一个 state 的问题合并成一次请求，还点明 noul 的 0.5 是「不确定」不是「中等」。明确标了只针对 jev-1.13，模型升版要回去重读 jaggedness 那页。</sub> | <img src="https://img.shields.io/github/stars/dbreunig/building-with-jev-skill?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/dbreunig/building-with-jev-skill?style=flat&logo=github&label=" alt="updated"> |
 | **[kitze/skillbox](https://github.com/kitze/skillbox)**<br><sub>创建于 2026-09-17 · 自托管、带版本的 skills 库，通过 MCP 提供，Jev 只用在一件事上：拿当前任务给已启用的 skill 目录打分，把该用的挑出来。看点在接入细节——TypeSafe 直连 / Vercel AI Gateway / OpenRouter 的 /alpha/decisions 三选一，目录按 32 个 skill、24KB 一批在 8 秒内跑完，任一批失败就整体回退到确定性搜索，绝不返回半截排序。</sub> | <img src="https://img.shields.io/github/stars/kitze/skillbox?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/kitze/skillbox?style=flat&logo=github&label=" alt="updated"> |
 | **[altryne/jevify](https://github.com/altryne/jevify)**<br><sub>创建于 2026-09-17 · 两种用法：日常干活时，它让 agent 把批量语义判断（扫长文档、排候选、逐条检查）先丢给 Jev，再把选中的证据读进推理上下文；直接说「jevify 这个代码库」，它会去找重复的 LLM 判断和脆弱的语义启发式，并把该换成 Jev 的问题写出来。README 也说清了这是社区 skill、不是 TypeSafe 官方产品，装了也不会自动拦截 tool 输出。</sub> | <img src="https://img.shields.io/github/stars/altryne/jevify?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/altryne/jevify?style=flat&logo=github&label=" alt="updated"> |
-
-<h2 id="score">⚖️ 打分与排序 <sub>3</sub></h2>
-
-<p><em>把判断变成一个能排序的数字。</em></p>
-
-| 项目 | 星数 · 最近更新 |
-|:--------------------------------------------------------|--------------------:|
-| **[ruban-24/switchboard](https://github.com/ruban-24/switchboard)**<br><sub>创建于 2026-09-20 · 由你自己的策略驱动的模型选择：Jev 只做任务评估，**如何解读这个评估由你的规则决定**。把判断和策略分开，这个形状是对的。</sub> | <img src="https://img.shields.io/github/stars/ruban-24/switchboard?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/ruban-24/switchboard?style=flat&logo=github&label=" alt="updated"> |
-| **[compozy/yoshi](https://github.com/compozy/yoshi)**<br><sub>创建于 2026-09-18 · 上下文裁剪代理：超过大小闸门才判定一次，然后按验证过的结论做删减，同时保持协议完整。README 里的说法是**量出来的，不是断言的**。</sub> | <img src="https://img.shields.io/github/stars/compozy/yoshi?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/compozy/yoshi?style=flat&logo=github&label=" alt="updated"> |
-| **[shiftynick/jev-axi](https://github.com/shiftynick/jev-axi)**<br><sub>创建于 2026-09-16 · 给智能体用的 Jev 命令行：选、评、查、排、分流、守门——类型化判定实际就那么几种形状，它把这几种做成了 shell 命令。</sub> | <img src="https://img.shields.io/github/stars/shiftynick/jev-axi?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/shiftynick/jev-axi?style=flat&logo=github&label=" alt="updated"> |
 
 <h2 id="code">🔎 代码搜索与评审 <sub>5</sub></h2>
 
@@ -155,7 +132,7 @@
 | **[moritzkremb/jev-voice-browser](https://github.com/moritzkremb/jev-voice-browser)**<br><sub>创建于 2026-09-17 · 每个语音中间结果只发一次 Jev 请求，并行问约 10 个 typed question——含「这话是对我说的吗」「会不会造成破坏」——所以你话没说完它已动手。实测 34/34、约 330ms、整个 demo 一美分。</sub> | <img src="https://img.shields.io/github/stars/moritzkremb/jev-voice-browser?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/moritzkremb/jev-voice-browser?style=flat&logo=github&label=" alt="updated"> |
 | **[jkudish/jev-browser](https://github.com/jkudish/jev-browser)**<br><sub>创建于 2026-09-17 · 每步由 Jev 选一个动作，另外单独给「目标达成」和「卡住」打分，预算和停止条件交给代码。维基 Coffee→Espresso 约 4 秒、$0.0016；密码脱敏做不到什么也写得很直白。</sub> | <img src="https://img.shields.io/github/stars/jkudish/jev-browser?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/jkudish/jev-browser?style=flat&logo=github&label=" alt="updated"> |
 
-<h2 id="apps">🖥 应用与界面 <sub>8</sub></h2>
+<h2 id="apps">🖥 应用与界面 <sub>9</sub></h2>
 
 <p><em>能直接打开用的成品。</em></p>
 
@@ -169,8 +146,9 @@
 | **[AboveColin/HA-Jev](https://github.com/AboveColin/HA-Jev)**<br><sub>创建于 2026-09-17 · 把 Jev 的答案变成 Home Assistant 的传感器，自动化流程就能像读别的数值一样读一个概率。顺便印证了一件事：决策模型根本不需要聊天界面。</sub> | <img src="https://img.shields.io/github/stars/AboveColin/HA-Jev?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/AboveColin/HA-Jev?style=flat&logo=github&label=" alt="updated"> |
 | **[thruwire/foreman](https://github.com/thruwire/foreman)**<br><sub>创建于 2026-09-17 · 在较慢的编码智能体之上放一层快速判定：喂给它一个工单或 bug 报告，由它决定下一步谁做什么。</sub> | <img src="https://img.shields.io/github/stars/thruwire/foreman?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/thruwire/foreman?style=flat&logo=github&label=" alt="updated"> |
 | **[Silbercue/public-browser](https://github.com/Silbercue/public-browser)**<br><sub>创建于 2026-04-07 · 让 Claude Code 和 Cursor 驱动你**真的已经登录**的 Chrome，并给出实测差值：token 更少、工具调用更少、工具定义也更少。</sub> | <img src="https://img.shields.io/github/stars/Silbercue/public-browser?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/Silbercue/public-browser?style=flat&logo=github&label=" alt="updated"> |
+| **[shiftynick/jev-axi](https://github.com/shiftynick/jev-axi)**<br><sub>创建于 2026-09-16 · 给智能体用的 Jev 命令行：选、评、查、排、分流、守门——类型化判定实际就那么几种形状，它把这几种做成了 shell 命令。</sub> | <img src="https://img.shields.io/github/stars/shiftynick/jev-axi?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/shiftynick/jev-axi?style=flat&logo=github&label=" alt="updated"> |
 
-<h2 id="infra">🔌 基础设施、SDK 与桥接 <sub>11</sub></h2>
+<h2 id="infra">🔌 基础设施、SDK 与桥接 <sub>12</sub></h2>
 
 <p><em>把 Jev 接进你现有的技术栈。</em></p>
 
@@ -187,6 +165,7 @@
 | **[itsmostafa/typesafe-mcp](https://github.com/itsmostafa/typesafe-mcp)**<br><sub>创建于 2026-09-17 · 一个静态 Go 二进制，不需要 Node 或 Python。`evaluate setup mcp` 一条命令自动注册进 Claude Code、Claude Desktop、Codex 和 pi。单次调用可传 100 条记录批量判断，其中一条失败不影响其余。</sub> | <img src="https://img.shields.io/github/stars/itsmostafa/typesafe-mcp?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/itsmostafa/typesafe-mcp?style=flat&logo=github&label=" alt="updated"> |
 | **[vinilana/jev-gateway](https://github.com/vinilana/jev-gateway)**<br><sub>创建于 2026-09-18 · 本地网关，只把"该调哪个工具"这一步交给 Jev，其余照常走原 LLM。参数全是 enum/boolean 时它直接自己拼调用，完全不请求大模型。Jev 挂了就原样透传、绝不让请求失败；作者也直说 Gemini 那条路只跑过单测、没对真 API 验过。</sub> | <img src="https://img.shields.io/github/stars/vinilana/jev-gateway?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/vinilana/jev-gateway?style=flat&logo=github&label=" alt="updated"> |
 | **[peterfriese/jev-foundation-models](https://github.com/peterfriese/jev-foundation-models)**<br><sub>创建于 2026-09-21 · 用 Swift 6 把 Jev 接成 Apple Foundation Models 的 model provider：@Generable 结构里的 Bool / enum / @Guide(.range) 直接对应 noul / choice / score，40-150ms 返回，还能从 metadata 拿到概率。README 开头就警告别把 API key 打进 App 包，要走自己的后端。</sub> | <img src="https://img.shields.io/github/stars/peterfriese/jev-foundation-models?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/peterfriese/jev-foundation-models?style=flat&logo=github&label=" alt="updated"> |
+| **[cline/plugins](https://github.com/cline/plugins)**<br><sub>创建于 2026-05-31 · Cline 的官方插件索引，其中一条精选插件是**刻意不在回路里放 LLM** 的浏览器插件。它是一条值得盯着的集成面。</sub> | <img src="https://img.shields.io/github/stars/cline/plugins?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/cline/plugins?style=flat&logo=github&label=" alt="updated"> |
 
 <h2 id="open">🔬 开源复现与替代 <sub>10</sub></h2>
 
@@ -217,7 +196,7 @@
 | **[danielgshea/jev-as-a-judge](https://github.com/danielgshea/jev-as-a-judge)**<br><sub>创建于 2026-09-17 · 把五次 agent 运行冻住，让每个 judge 重复打分 100 次：Jev 与人工标签全对（Claude Sonnet 4.6 只有 80%），分数方差低 92–913 倍，总花费 $0.34 对 $28.17。作者反复强调只有五个 case、一个标注人，不当成普适排名。</sub> | <img src="https://img.shields.io/github/stars/danielgshea/jev-as-a-judge?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/danielgshea/jev-as-a-judge?style=flat&logo=github&label=" alt="updated"> |
 | **[sutro-sh/jev-align](https://github.com/sutro-sh/jev-align)**<br><sub>创建于 2026-09-19 · 主动学习式的 CLI：挑出 Jev 最不确定的样本让你标，再用 GEPA 改写函数定义。关键一条是训练分变高也绝不自动采纳，得你点头。发布到 ai-functions.dev 时只带标注和配置，不带你的原始数据和 key。</sub> | <img src="https://img.shields.io/github/stars/sutro-sh/jev-align?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/sutro-sh/jev-align?style=flat&logo=github&label=" alt="updated"> |
 
-<h2 id="domain">🎯 垂直应用 <sub>12</sub></h2>
+<h2 id="domain">🎯 垂直应用 <sub>11</sub></h2>
 
 <p><em>Jev 对准某一个具体问题。</em></p>
 
@@ -225,7 +204,6 @@
 |:--------------------------------------------------------|--------------------:|
 | **[Hangzhi/diffusion-jev-sglang](https://github.com/Hangzhi/diffusion-jev-sglang)**<br><sub>创建于 2026-09-21 · 用扩散模型在图像上跑 Jev 式的类型化判定：猜涂鸦、认花、选 emoji。**Jev 这套形状能不能离开文本**，这里在做实测。</sub> | <img src="https://img.shields.io/github/stars/Hangzhi/diffusion-jev-sglang?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/Hangzhi/diffusion-jev-sglang?style=flat&logo=github&label=" alt="updated"> |
 | **[shitianfang/jev-use](https://github.com/shitianfang/jev-use)**<br><sub>创建于 2026-09-19 · 把智能体那些不需要产出文本的步骤交给 Jev，而且数字直接摆在开头：p50 约 230 毫秒。中文文档。</sub> | <img src="https://img.shields.io/github/stars/shitianfang/jev-use?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/shitianfang/jev-use?style=flat&logo=github&label=" alt="updated"> |
-| **[cline/plugins](https://github.com/cline/plugins)**<br><sub>创建于 2026-05-31 · Cline 的官方插件索引，其中一条精选插件是**刻意不在回路里放 LLM** 的浏览器插件。它是一条值得盯着的集成面。</sub> | <img src="https://img.shields.io/github/stars/cline/plugins?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/cline/plugins?style=flat&logo=github&label=" alt="updated"> |
 | **[kyotofin/tax-doc-classifier](https://github.com/kyotofin/tax-doc-classifier)**<br><sub>创建于 2026-09-18 · 把生产里的 Sonnet 分类器换掉：每页 $0.00115 vs $0.039、0.5s vs 3.3s、能认 261 种 IRS 表单而不是 30 种。评分很严——置信度低于 0.95 即使答对也算错。</sub> | <img src="https://img.shields.io/github/stars/kyotofin/tax-doc-classifier?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/kyotofin/tax-doc-classifier?style=flat&logo=github&label=" alt="updated"> |
 | **[jerryjliu/docjev](https://github.com/jerryjliu/docjev)**<br><sub>创建于 2026-09-19 · 本地抽文本 + 一次 Jev 决策，做 PDF 的分类与拆分。难得的是 40 份文档的 benchmark 如实写了输的那一项：分类 40/40 打平，拆分 7/8 输给 Luna 的 8/8。</sub> | <img src="https://img.shields.io/github/stars/jerryjliu/docjev?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/jerryjliu/docjev?style=flat&logo=github&label=" alt="updated"> |
 | **[realZachi/pg-jev](https://github.com/realZachi/pg-jev)**<br><sub>创建于 2026-09-17 · Postgres 扩展，`WHERE jev(tickets,'客户在生气')` 就是个普通布尔函数。最值得看的是分批实测：每请求 20 行 100% 正确，40 行掉到 92–98%，80 行只剩 77–94%。</sub> | <img src="https://img.shields.io/github/stars/realZachi/pg-jev?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/realZachi/pg-jev?style=flat&logo=github&label=" alt="updated"> |
@@ -236,9 +214,9 @@
 | **[bytelabs-oss/clash-jev](https://github.com/bytelabs-oss/clash-jev)**<br><sub>创建于 2026-09-21 · 通过 adb 在真机上打皇室战争，完全没有训练策略：OpenCV 加手标的兵种分类器每秒生成一份 JSON state，Jev 串行回答策略/出牌/落点三问，各约 135 ms，一局约 $0.004。最值得看的是设计取舍表：作者故意不过滤买不起的牌、不喂克制关系——因为一旦 state 里列了克制表，正确出牌率就从五五开跳到 98%，那测的是作者不是模型。</sub> | <img src="https://img.shields.io/github/stars/bytelabs-oss/clash-jev?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/bytelabs-oss/clash-jev?style=flat&logo=github&label=" alt="updated"> |
 | **[trungdq88/youtube-sponsor-detection](https://github.com/trungdq88/youtube-sponsor-detection)**<br><sub>创建于 2026-09-17 · 跳 YouTube 恰饭段，但 Jev 从不碰时间戳：字幕渲染成 `L042\|` 行号，Jev 按 80 行窗口挑行 ID，再由代码换算回秒。三种模式都标了每小时观看成本（纯字幕不到一分钱，纯听音 $0.46），策略上宁可多看一秒也不误切正片，并附带以 SponsorBlock 标注为准的 recall/precision/边界误差评测脚本。</sub> | <img src="https://img.shields.io/github/stars/trungdq88/youtube-sponsor-detection?style=flat&logo=github&label=" alt="stars"> <img src="https://img.shields.io/github/last-commit/trungdq88/youtube-sponsor-detection?style=flat&logo=github&label=" alt="updated"> |
 
-<h2 id="hot">📈 热门项目（按星数自动排序）</h2>
+<h2 id="hot">📈 按星数排序（原始数据，自动生成）</h2>
 
-<em>由 `scripts/gen_readme.py` 从 `data/stars.json` 生成。⛔ 不手写。星数即便脚本没跑也不会过期——徽章是实时的。</em>
+<em>星数只说明有多少人点过星标，**不说明项目好不好用**。这里的排序纯粹是数字。要看该选哪个，用上面的「怎么选」。</em>
 
 | # | 项目 | 星数 | 创建 |
 |--:|:--------------------------|--------------------:|------------------:|
@@ -255,21 +233,28 @@
 
 ---
 
-<h2 id="choose">🧭 怎么选</h2>
-
-**想搞懂 Jev** → `browser-use/jev-ultrafast`。生态里最大的一次成本削减，看它怎么写那一次判定。
-
-**想明天就能用上** → Claude Code 上用 `tamaratran/fast-jev-compaction`，浏览器自动化用 `browser-use/jev-ultrafast`。
-
-**想自己做一个** → 从 `kerpopule/hermes-jev-skills` 起步，回路已经接好了。
-
 ---
 
 ### 关于
 
-这是一个**独立的、非官方**的 Jev 项目精选清单，收录 **84 个项目、12 个类别**。
+这是一个**独立的、非官方**的 Jev 项目精选清单，收录 **84 个项目、11 个类别**。
 与 TypeSafe AI 没有隶属关系，也没有得到它的背书。
 
 搜 "Jev" 会出来上万个仓库，大部分点进去是空的、改名的、或者只是把官方文档抄了一遍。
 **这个清单回答的不是「Jev 是什么」**——那是[官方文档](https://docs.typesafe.ai)的活，
 而且它会变。这里回答的是另一个问题：**这么多项目里，我该看哪个、为什么是它。**
+
+**凭什么信这份清单**：**每一条都配了一句手写的「为什么是它」。**
+说不出这句的就不进来 —— ⭐⭐ **清单是 84 条而不是搜出来的上万条，差的就是这一条。**
+
+### 会更新什么
+
+**这份清单会持续更新。** 会变的是这些：
+
+- 🔄 **星数和最近更新日期是实时的。** 页面上每个数字都是徽章，不是写死的，
+  所以不会过期。
+- 📈 **排序表每天重排。** 新的会爬上来、停更的会掉下去，自己会动。
+- 🔍 **死链会被清掉。** 被删或改名的仓库会被发现 ——
+  ⚠️ 没有这一条的话，死链只会安静地挂在那儿，看起来一切正常。
+- ✍️ **新条目要说得出理由才进得来。** 见 [CONTRIBUTING.md](CONTRIBUTING.md)，
+  一句话概括：**说不出「为什么它在清单上」，它就不在。**

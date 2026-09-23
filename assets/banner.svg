@@ -54,7 +54,7 @@
         font-size="19" fill="#a9b3d6">The Jev projects actually worth your time.</text>
   <rect x="74" y="184" width="64" height="3" rx="1.5" fill="url(#acc)"/>
   <text x="74" y="216" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,PingFang SC,sans-serif"
-        font-size="14.5" fill="#7a85ad">84 projects, 12 categories. Not everything — just the ones we'd tell a friend to try.</text>
+        font-size="14.5" fill="#7a85ad">84 projects, 11 categories. Not everything — just the ones we'd tell a friend to try.</text>
   <text x="74" y="246" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,PingFang SC,sans-serif"
         font-size="12.5" fill="#4e5878" letter-spacing="1.6">ENGLISH  ·  中文</text>
 </svg>
