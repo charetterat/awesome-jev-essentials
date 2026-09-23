@@ -12,43 +12,43 @@
       "items": [
         {
           "repo": "gargpratyush/jev-router",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Routes per turn in Claude Code and Codex — simple work to the fast tier, hard work to the strong one — without changing either CLI's interface, tools, sessions or auth. The drop-in kind of router.",
+          "reason_zh": "在 Claude Code 和 Codex 里逐轮选路：简单活给快档，难活给强档，而两个 CLI 的界面、工具、会话、登录方式一律不动。属于「装上就用」的那种路由器。"
         },
         {
           "repo": "prismhq/jev-router",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "A server-side router: clients send one model id and Jev picks which model serves the request. Transport is LiteLLM, so it slots into an existing gateway rather than replacing it.",
+          "reason_zh": "服务端路由器：客户端只发一个模型 id，由 Jev 决定这次请求交给哪个模型。传输层用 LiteLLM，所以它是接进你现有的网关，而不是替换掉它。"
         },
         {
           "repo": "miniLV/Jev-Auto-Router",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Chinese-language, and honest about it: the README says the architecture is settled but the runtime is still a prototype, and tells you not to treat the design as production install instructions. Rare candour.",
+          "reason_zh": "中文项目，而且难得地诚实：README 明写架构已定、运行时还在原型验证阶段，并提醒不要把设计当成分投产的安装说明。这种坦白很少见。"
         },
         {
           "repo": "shimo4228/jev-skill-router",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "The authors built it, ran it, and then published the conclusion that as a router it probably won't help a strong model. It ships shadow-first so you can watch its calls before trusting them.",
+          "reason_zh": "作者做完、跑过，然后**在 README 里写明：作为路由器它大概率帮不了强模型**。默认影子模式，你可以先看它怎么判的，再决定要不要信。"
         },
         {
           "repo": "GodsBoy/jev-agent-skill-router",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Carries a measured number — 68 of 72 synthetic requests routed correctly against a 70.8% lexical baseline — and labels the result exploratory and reused-data. States its limits next to its win.",
+          "reason_zh": "带实测数字：72 个合成请求里路由对了 68 个，词法基线是 70.8%；同时自己标注「探索性结果、复用了数据」。把结论和局限写在一起，这点值得学。"
         },
         {
           "repo": "jekozyra/pi-typesafe-router",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "One sentence, one job: classify the request, route it to the right model. The README's second line warns you not to run it alongside another automatic router.",
+          "reason_zh": "一句话一个职责：判断请求类型，路由到对应模型。README 第二行就提醒你——别和别的自动路由器同时开。"
         },
         {
           "repo": "adarshmishra07/jcm-router",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "A local proxy that picks model and effort per message, routes subagents, and deliberately leaves your cached main chat alone. Your subscription login keeps working.",
+          "reason_zh": "本地代理，逐消息选模型和推理档位，会给子智能体选路，但**刻意不碰你已缓存的主对话**。原有的订阅登录照常可用。"
         },
         {
           "repo": "mejiasd3v/pi-jev-router",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Smallest useful version: Jev picks the model once per session and the choice stays fixed. No per-turn churn — which is the right default if you dislike a model changing under you.",
+          "reason_zh": "最小可用版：Jev 每个会话选一次模型，然后固定住。不做逐轮切换——如果你不喜欢模型在自己脚下被换掉，这是更合理的默认。"
         }
       ]
     },
@@ -77,18 +77,18 @@
         },
         {
           "repo": "jesset/pi-verdict",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "A ~1k-line permission gate in the style of Claude Code's auto mode. Built-in danger rules and your own allow/deny lists settle the obvious cases at zero latency; only the ambiguous ones cost a model call.",
+          "reason_zh": "约 1 千行的权限闸门，模仿 Claude Code 的 auto 模式。内置危险规则 + 你自己的允许/拒绝清单，先零延迟地解决掉明显的情况；只有真正含糊的才花一次模型调用。"
         },
         {
           "repo": "raihankhan-rk/diffjury",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Paste a PR URL and Jev decides whether it is risky. Shipped as a usable page rather than a library, which makes it the easiest one here to actually try.",
+          "reason_zh": "贴一个 PR 链接，由 Jev 判断这次改动有没有风险。它做成了能直接用的页面而不是一个库——这一类里最容易上手试的一个。"
         },
         {
           "repo": "DanRWilloughby/snifftest",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Prose linter for AI writing tells: zero dependencies, countable rules, plus one judgment model for the calls a rule cannot make. A clean example of mixing deterministic checks with a model.",
+          "reason_zh": "查「AI 味」的文稿检查器：零依赖、规则可数，只在规则判断不了的地方加一次模型判定。**确定性检查 + 模型判断**怎么配合，这里是个干净的例子。"
         }
       ]
     },
@@ -107,18 +107,18 @@
         },
         {
           "repo": "tamaratran/jev-pruner",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Trims noisy Bash output after the command runs but before the result reaches the model — so the saving is real context, not a summarised approximation of it.",
+          "reason_zh": "命令跑完、结果还没送到模型之前，先把冗长的 Bash 输出削掉。省下来的**是真的上下文，不是摘要出来的近似物**。"
         },
         {
           "repo": "joelhooks/pi-fast-jev-compaction",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Keeps conversation text verbatim while pruning stale tool history, and says so plainly: layer 1 only — it does not summarise, rewrite, or invent memory.",
+          "reason_zh": "对话正文原样保留，只清理过期的工具调用记录。而且说得很直白：**只做第一层**——不摘要、不改写、不编造记忆。"
         },
         {
           "repo": "leonaaardob/fast-dev-compaction",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Port of the Claude Code compaction plugin to Codex lifecycle hooks: score every tool call, compact, then re-inject the verbatim history Jev chose to keep.",
+          "reason_zh": "把 Claude Code 那个压缩插件移植到 Codex 的生命周期钩子上：给每次工具调用打分、压缩、再把 Jev 判定要留的原样历史重新注入。"
         }
       ]
     },
@@ -132,18 +132,18 @@
       "items": [
         {
           "repo": "safzanpirani/pi-jev-skill-picker",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Replaces the whole skills catalog in the system prompt with one ranking tool — so installing more skills stops costing you tokens on every turn.",
+          "reason_zh": "把系统提示里整份技能目录换成一个排序工具。装了再多技能，也不再是每一轮都要为那份目录付 token。"
         },
         {
           "repo": "yuyang2230/jev-agent-skill",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Offloads the small frequent judgments — classify, screen, score, check — onto Jev's free tier so the main model only does generation. Chinese docs, and it shows the cost arithmetic.",
+          "reason_zh": "把高频小判断（分类/初筛/打分/核查）卸到 Jev 的免费档上，主模型只负责生成。中文文档，而且把成本账算给你看。"
         },
         {
           "repo": "HyunjunJeon/pi-quiet-ask",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Jev as the quiet decision layer: the main model keeps writing code, Jev answers the closed questions the harness has to ask, in about 250 ms.",
+          "reason_zh": "把 Jev 当成安静的决策层：主模型继续写代码，由 Jev 回答框架必须问的那些封闭式问题，约 250 毫秒一次。"
         },
         {
           "repo": "kerpopule/hermes-jev-skills",
@@ -162,18 +162,18 @@
       "items": [
         {
           "repo": "ruban-24/switchboard",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Model-agnostic routing driven by your own policy: Jev assesses the task, your rules decide what that assessment means. Separating judgement from policy is the right shape.",
+          "reason_zh": "由你自己的策略驱动的模型选择：Jev 只做任务评估，**如何解读这个评估由你的规则决定**。把判断和策略分开，这个形状是对的。"
         },
         {
           "repo": "compozy/yoshi",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Context-pruning proxy that judges once above a size gate and then applies the validated omissions while keeping the protocol intact. The README claims are measured, not asserted.",
+          "reason_zh": "上下文裁剪代理：超过大小闸门才判定一次，然后按验证过的结论做删减，同时保持协议完整。README 里的说法是**量出来的，不是断言的**。"
         },
         {
           "repo": "shiftynick/jev-axi",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "An agent-ergonomic CLI over Jev: pick, rate, check, rank, triage, guard — the six shapes a typed decision actually takes, exposed as shell commands.",
+          "reason_zh": "给智能体用的 Jev 命令行：选、评、查、排、分流、守门——类型化判定实际就那么几种形状，它把这几种做成了 shell 命令。"
         }
       ]
     },
@@ -207,23 +207,23 @@
         },
         {
           "repo": "yikangy873-gif/jev-desktop",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Codex handles the goal, prepares the text and verifies the result; Jev picks the action and its target in one request. A clean split between planning and deciding.",
+          "reason_zh": "Codex 负责理解目标、准备文本、核对结果；Jev 在一次请求里选定动作和目标。**规划与判定各归各**，这个切分很干净。"
         },
         {
           "repo": "AboveColin/HA-Jev",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Turns Jev's answers into Home Assistant sensors, so an automation can read a probability like any other number. A nice reminder that a decision model needs no chat UI.",
+          "reason_zh": "把 Jev 的答案变成 Home Assistant 的传感器，自动化流程就能像读别的数值一样读一个概率。顺便印证了一件事：决策模型根本不需要聊天界面。"
         },
         {
           "repo": "thruwire/foreman",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Puts a fast decision model above slower coding agents: feed it a ticket or a bug report and it decides who does what next.",
+          "reason_zh": "在较慢的编码智能体之上放一层快速判定：喂给它一个工单或 bug 报告，由它决定下一步谁做什么。"
         },
         {
           "repo": "Silbercue/public-browser",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Lets Claude Code and Cursor drive your real logged-in Chrome, and reports the delta it measured: fewer tokens, fewer tool calls, fewer tool definitions.",
+          "reason_zh": "让 Claude Code 和 Cursor 驱动你**真的已经登录**的 Chrome，并给出实测差值：token 更少、工具调用更少、工具定义也更少。"
         }
       ]
     },
@@ -237,33 +237,33 @@
       "items": [
         {
           "repo": "burnigtm/jev-mcp",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "A local stdio MCP server exposing Jev as typed judgments, including a step router that selects a prepared call in the same request.",
+          "reason_zh": "本地 stdio 的 MCP 服务器，把 Jev 暴露成类型化判定；其中路由下一个步骤的工具，会在同一次请求里把要调用的东西一起选好。"
         },
         {
           "repo": "tacticocc/Jevbridge",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "ACP and MCP adapter putting Jev next to Codex, Claude, Grok and OpenCode. The README opens by explaining why a text-free model makes a poor chatbot — useful framing.",
+          "reason_zh": "ACP + MCP 适配器，把 Jev 和 Codex、Claude、Grok、OpenCode 摆在一起用。README 一上来就讲清楚**为什么一个不生成文本的模型当聊天机器人不好用**，这个铺垫很有用。"
         },
         {
           "repo": "valentynkit/jev-belay",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "A Claude Code Stop hook that blocks an unverified \"done\": it reads the transcript, and only when files changed with no check passed does it spend one Jev call. Fails open.",
+          "reason_zh": "一个 Claude Code 的 Stop 钩子，专门拦住「没验证就说做完了」：先读本地记录，只有当改过文件却没有任何检查通过时，才花一次 Jev 调用。出问题时不阻断。"
         },
         {
           "repo": "gtaras7/typesafe-jev",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Experiments in building software around a decision model instead of a chat prompt. Each piece is self-contained with its own README, tests and measured results.",
+          "reason_zh": "一组「围绕决策模型而不是聊天提示词来写软件」的实验。每一件都自带 README、测试和实测结果，可以单独拿走。"
         },
         {
           "repo": "legacybridge-tech/pi-typesafe-jev",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Exposes the judgments as five tools, so the model makes narrow semantic calls while your code keeps control of thresholds and weights.",
+          "reason_zh": "把判定能力拆成五个工具：模型只做窄口径的语义判断，**阈值和权重始终留在你的代码手里**。"
         },
         {
           "repo": "GiesN/typesafe-jev-workflow",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Deliberately small and complete: a mocked email goes in, a typed Choice comes out, and it routes to a demo handler. The clearest minimal wiring in the list.",
+          "reason_zh": "刻意做得又小又完整：塞一封模拟邮件进去，拿回一个带类型的 Choice，再路由到示例处理器。**清单里最小、最清楚的接线范例**。"
         },
         {
           "repo": "TypeSafeAI/typesafe-playground",
@@ -282,23 +282,18 @@
       "items": [
         {
           "repo": "Hangzhi/diffusion-jev-sglang",
-          "reason_en": null,
-          "reason_zh": null
-        },
-        {
-          "repo": "usenotra/notra",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "A diffusion model that runs Jev-style typed decisions on images — guess the doodle, name the flower, pick an emoji. Whether Jev's shape generalises past text, tested.",
+          "reason_zh": "用扩散模型在图像上跑 Jev 式的类型化判定：猜涂鸦、认花、选 emoji。**Jev 这套形状能不能离开文本**，这里在做实测。"
         },
         {
           "repo": "shitianfang/jev-use",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Hands the agent steps that need no text output to Jev, with the numbers stated up front: p50 around 230 ms. Chinese docs.",
+          "reason_zh": "把智能体那些不需要产出文本的步骤交给 Jev，而且数字直接摆在开头：p50 约 230 毫秒。中文文档。"
         },
         {
           "repo": "cline/plugins",
-          "reason_en": null,
-          "reason_zh": null
+          "reason_en": "Cline's official plugin index, and one of its curated entries is a browser plugin that deliberately runs with no LLM in the loop. Worth watching as an integration surface.",
+          "reason_zh": "Cline 的官方插件索引，其中一条精选插件是**刻意不在回路里放 LLM** 的浏览器插件。它是一条值得盯着的集成面。"
         }
       ]
     }
