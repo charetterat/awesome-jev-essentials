@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="awesome-jev-essentials" width="100%">
+</p>
+
 # awesome-jev-essentials
 
 **真正值得你花时间的 Jev 项目** —— 挑过、比过、持续更新。

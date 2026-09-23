@@ -123,7 +123,11 @@ def render(cats, stars, zh):
         claim = "🔴 **Writing a \"why this one\" for every entry is the work** —"
         claim2 = ("a list of bare names is what a GitHub search produces "
                   "in one second, and it is worth exactly that.")
-    return f"""# {title}
+    return f"""<p align="center">
+  <img src="assets/banner.svg" alt="awesome-jev-essentials" width="100%">
+</p>
+
+# {title}
 
 {tag}
 

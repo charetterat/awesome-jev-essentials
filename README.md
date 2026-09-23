@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="awesome-jev-essentials" width="100%">
+</p>
+
 # awesome-jev-essentials
 
 **The Jev projects actually worth your time** — picked, compared, kept current.
