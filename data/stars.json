@@ -1,6 +1,6 @@
 {
   "gargpratyush/jev-router": {
-    "stars": 618,
+    "stars": 620,
     "created": "2026-09-16",
     "pushed": "2026-09-19",
     "lang": "JavaScript",
@@ -72,7 +72,7 @@
     "desc": "Open-source model and reasoning effort router for Claude Code and Codex, using Jev or experimental self-hosted Laya."
   },
   "leepokai/jev-guard": {
-    "stars": 120,
+    "stars": 121,
     "created": "2026-09-17",
     "pushed": "2026-10-02",
     "lang": "JavaScript",
@@ -114,7 +114,7 @@
   "DanRWilloughby/snifftest": {
     "stars": 35,
     "created": "2026-09-17",
-    "pushed": "2026-10-22",
+    "pushed": "2026-10-23",
     "lang": "TypeScript",
     "archived": false,
     "desc": "A prose linter that sniffs out AI writing tells. Zero dependencies, countable rules plus one judgment model."
@@ -128,7 +128,7 @@
     "desc": "A calibrated context sieve for Claude Code: every tool result is judged by a System One model before it enters context."
   },
   "tamaratran/fast-jev-compaction": {
-    "stars": 7744,
+    "stars": 7751,
     "created": "2026-09-17",
     "pushed": "2026-09-18",
     "lang": "TypeScript",
@@ -192,9 +192,9 @@
     "desc": "TypeSafe Jev as the pi coding agent's quiet decision layer"
   },
   "kerpopule/hermes-jev-skills": {
-    "stars": 1152,
+    "stars": 1164,
     "created": "2026-09-18",
-    "pushed": "2026-10-22",
+    "pushed": "2026-10-23",
     "lang": "Python",
     "archived": false,
     "desc": "Jev-powered model routing, memory, compaction, skill selection, computer and browser use for Hermes agents (also Claude Code and Codex)"
@@ -208,7 +208,7 @@
     "desc": "A skill for writing and improving programs that call Jev, TypeSafe's System One model"
   },
   "kitze/skillbox": {
-    "stars": 272,
+    "stars": 273,
     "created": "2026-09-17",
     "pushed": "2026-10-23",
     "lang": "TypeScript",
@@ -248,7 +248,7 @@
     "desc": "Jev-powered semantic code search for coding agents — find behavior across repositories via CLI or MCP, with exact source excerpts and line numbers."
   },
   "devagrawal09/jev-review": {
-    "stars": 688,
+    "stars": 692,
     "created": "2026-09-16",
     "pushed": "2026-09-17",
     "lang": "TypeScript",
@@ -280,7 +280,7 @@
     "desc": "5–10x faster browser operations: Jev clicks, Codex thinks and verifies. Built at EZCollegeApp."
   },
   "moritzkremb/jev-voice-browser": {
-    "stars": 416,
+    "stars": 417,
     "created": "2026-09-17",
     "pushed": "2026-09-21",
     "lang": "JavaScript",
@@ -296,7 +296,7 @@
     "desc": "Browser use using Typesafe's Jev model"
   },
   "browser-use/jev-ultrafast": {
-    "stars": 23506,
+    "stars": 23548,
     "created": "2026-09-16",
     "pushed": "2026-09-30",
     "lang": "Python",
@@ -304,7 +304,7 @@
     "desc": "Fastest and cheapest web agent"
   },
   "jev-chat/jev-chat-jarvis": {
-    "stars": 8009,
+    "stars": 8039,
     "created": "2026-09-21",
     "pushed": "2026-10-16",
     "lang": "Kotlin",
@@ -312,7 +312,7 @@
     "desc": "The chat decision assistant: before you reply, Jev reads the chat, judges intent and risk, and drafts replies you fill in with one tap. You press send. Android "
   },
   "jarrodwatts/jev-trader": {
-    "stars": 3063,
+    "stars": 3067,
     "created": "2026-09-16",
     "pushed": "2026-10-13",
     "lang": "TypeScript",
@@ -370,7 +370,7 @@
   "burnigtm/jev-mcp": {
     "stars": 64,
     "created": "2026-09-17",
-    "pushed": "2026-10-17",
+    "pushed": "2026-10-24",
     "lang": "TypeScript",
     "archived": false,
     "desc": "MCP server that puts TypeSafe Jev on the coding loop in Cursor, Codex, and any MCP client"
@@ -424,7 +424,7 @@
     "desc": "Community TypeSafe AI playground: 110 use cases, games, dilemmas and model challenges, with editable prompts, A/B comparisons and a mobile-friendly UI."
   },
   "jkudish/jev-mcp": {
-    "stars": 548,
+    "stars": 549,
     "created": "2026-09-17",
     "pushed": "2026-10-21",
     "lang": "JavaScript",
@@ -434,7 +434,7 @@
   "itsmostafa/typesafe-mcp": {
     "stars": 354,
     "created": "2026-09-17",
-    "pushed": "2026-10-20",
+    "pushed": "2026-10-23",
     "lang": "Go",
     "archived": false,
     "desc": "System One MCP connector to evaluate anything fast and cheap. Give your AI agent direct access to models like: Jev, D1, CLM and Laya"
@@ -464,7 +464,7 @@
     "desc": "Official curated plugins for Cline CLI and extensions"
   },
   "Mapika/decider": {
-    "stars": 1152,
+    "stars": 1156,
     "created": "2026-09-16",
     "pushed": "2026-10-20",
     "lang": "Python",
@@ -488,7 +488,7 @@
     "desc": "A small open decision model: state + typed questions -> calibrated probabilities. A Jev / System One re-creation on Qwen3.5."
   },
   "featherless-ai/simple-jev": {
-    "stars": 614,
+    "stars": 615,
     "created": "2026-09-18",
     "pushed": "2026-10-07",
     "lang": "Python",
@@ -496,15 +496,15 @@
     "desc": "Turn any open model into a classifier/jev endpoint"
   },
   "jaredpalmer/kev": {
-    "stars": 9466,
+    "stars": 9488,
     "created": "2026-09-17",
-    "pushed": "2026-10-22",
+    "pushed": "2026-10-23",
     "lang": "Python",
     "archived": false,
     "desc": "Jev-like family of decision models built on top of Qwen3.5/3.8 you can train and run on your own"
   },
   "TianyuCodings/NanoJev": {
-    "stars": 2560,
+    "stars": 2563,
     "created": "2026-09-17",
     "pushed": "2026-10-16",
     "lang": "Python",
@@ -512,7 +512,7 @@
     "desc": "A nano replica of Jev: parallel decisions, dynamic candidates, and an end-to-end training pipeline."
   },
   "wfzyx/von": {
-    "stars": 918,
+    "stars": 919,
     "created": "2026-09-18",
     "pushed": "2026-10-19",
     "lang": "Python",
@@ -520,7 +520,7 @@
     "desc": "The open-source System One decision model. Sub-15ms, non-autoregressive, local drop-in alternative to TypeSafe Jev."
   },
   "razorback16/openjev": {
-    "stars": 743,
+    "stars": 745,
     "created": "2026-09-18",
     "pushed": "2026-10-13",
     "lang": "Python",
@@ -536,7 +536,7 @@
     "desc": "Jev-compatible API endpoint based on open models (prefill-only)"
   },
   "nokia-applied-research/AnyJev": {
-    "stars": 1471,
+    "stars": 1473,
     "created": "2026-09-21",
     "pushed": "2026-10-21",
     "lang": "Python",
@@ -544,7 +544,7 @@
     "desc": "Turn any LLM into a Jev-style decision model: typed decisions, real probabilities, no training. (continue updating, welcome any issue and PR request)"
   },
   "fstandhartinger/jevbench": {
-    "stars": 302,
+    "stars": 304,
     "created": "2026-09-19",
     "pushed": "2026-10-15",
     "lang": "Python",
@@ -560,7 +560,7 @@
     "desc": "Independent, evidence-based map of when TypeSafe's Jev actually holds up vs. breaks down — real API-call receipts, not a leaderboard. 中文為主的雙語 repo。"
   },
   "openlayer-ai/jevals": {
-    "stars": 105,
+    "stars": 106,
     "created": "2026-09-20",
     "pushed": "2026-10-15",
     "lang": "Python",
@@ -568,7 +568,7 @@
     "desc": "Agent evals and guardrails as Jev decisions: one request per trace, a fraction of a cent, fast enough for the agent loop. Runs locally with Kev or Laya."
   },
   "danielgshea/jev-as-a-judge": {
-    "stars": 109,
+    "stars": 110,
     "created": "2026-09-17",
     "pushed": "2026-09-23",
     "lang": "Python",
@@ -592,7 +592,7 @@
     "desc": "A Jev-like decision engine powered by DiffusionGemma and SGLang. Jev with eyes. "
   },
   "shitianfang/jev-use": {
-    "stars": 64,
+    "stars": 65,
     "created": "2026-09-19",
     "pushed": "2026-09-22",
     "lang": "JavaScript",
@@ -608,7 +608,7 @@
     "desc": "Tax document page classifier built on Jev decisions. 100% strict accuracy across 261 IRS forms, ~$0.001 per page."
   },
   "jerryjliu/docjev": {
-    "stars": 536,
+    "stars": 538,
     "created": "2026-09-19",
     "pushed": "2026-09-26",
     "lang": "Python",
@@ -616,7 +616,7 @@
     "desc": "A very fast document classifier/splitter using Jev "
   },
   "realZachi/pg-jev": {
-    "stars": 1209,
+    "stars": 1212,
     "created": "2026-09-17",
     "pushed": "2026-10-06",
     "lang": "Shell",
@@ -632,7 +632,7 @@
     "desc": "Open-source AI email triage for Gmail. Sorts your inbox into Needs reply, Updates, Promos, Sales and Spam with Jev, TypeSafe AI's decision model, via Vercel AI "
   },
   "rmalde/minecraft-agent": {
-    "stars": 600,
+    "stars": 601,
     "created": "2026-09-20",
     "pushed": "2026-09-20",
     "lang": "JavaScript",
