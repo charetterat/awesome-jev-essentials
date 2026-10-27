@@ -157,6 +157,18 @@ def render(cats, stars, zh):
     n_total = sum(len(c["items"]) for c in cats)
     n_with = sum(1 for c in cats for i in c["items"]
                  if (i["reason_zh"] if zh else i["reason_en"]))
+    # 🔴 2026-10-27：首屏加「最后更新」徽章。
+    #    成因：本仓 README 顶部是 HTML 徽章布局，**没有任何「本清单最后更新于哪天」**
+    #    ⇒ ① 读者无法判断新鲜度；② 日更工具的产物侧核验（首屏须出现今天）永远报红。
+    #    ⚠️ 本仓由 GitHub Actions 每天自动重生成（.github/workflows/update.yml，
+    #       03:17 UTC）⇒ **改动必须进仓库**，否则会被 Actions 用旧版渲染器覆盖。
+    #    ⇒ 日期取自 `data/projects.json` 的 `updated`；
+    #       ⛔ 不在这里自己取今天 —— 那样数据与渲染会各说各话。
+    try:
+        updated = json.load(open(D("data", "projects.json"),
+                                 encoding="utf-8")).get("updated") or "?"
+    except Exception:
+        updated = "?"
     if zh:
         title = "awesome-jev-essentials"
         tag = "**真正值得你花时间的 Jev 项目** —— 挑过、比过、持续更新。"
@@ -253,6 +265,10 @@ source. MIT licensed."""
 {tag}
 
 {lang}
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Last%20updated-{updated}-green" alt="Last updated">
+</p>
 
 ## {"这是什么" if zh else "What this is"}
 

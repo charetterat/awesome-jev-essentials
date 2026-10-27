@@ -12,6 +12,10 @@
 
 **English** · [中文](README.zh-CN.md)
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Last%20updated-2026-10-27-green" alt="Last updated">
+</p>
+
 ## What this is
 
 An **independent, unaffiliated** catalog of Jev projects —

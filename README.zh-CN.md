@@ -12,6 +12,10 @@
 
 **English** · [中文](README.zh-CN.md)
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Last%20updated-2026-10-27-green" alt="Last updated">
+</p>
+
 ## 这是什么
 
 这是一个**独立的、非官方**的 Jev 项目精选清单，收录 **84 个项目、11 个类别**。
