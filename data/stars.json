@@ -80,7 +80,7 @@
     "desc": "Auto mode for every coding agent, built on Jev: risk-scores every tool call with session context (deny / ask / allow), flags prompt injection in results, checks"
   },
   "y0usaf/pi-jev": {
-    "stars": 165,
+    "stars": 166,
     "created": "2026-09-16",
     "pushed": "2026-10-31",
     "lang": "TypeScript",
@@ -112,7 +112,7 @@
     "desc": "DiffJury — TypeSafe Jev PR risk router + code review coach"
   },
   "DanRWilloughby/snifftest": {
-    "stars": 37,
+    "stars": 38,
     "created": "2026-09-17",
     "pushed": "2026-10-26",
     "lang": "TypeScript",
@@ -128,7 +128,7 @@
     "desc": "A calibrated context sieve for Claude Code: every tool result is judged by a System One model before it enters context."
   },
   "tamaratran/fast-jev-compaction": {
-    "stars": 7989,
+    "stars": 7993,
     "created": "2026-09-17",
     "pushed": "2026-09-18",
     "lang": "TypeScript",
@@ -192,7 +192,7 @@
     "desc": "TypeSafe Jev as the pi coding agent's quiet decision layer"
   },
   "kerpopule/hermes-jev-skills": {
-    "stars": 1348,
+    "stars": 1350,
     "created": "2026-09-18",
     "pushed": "2026-11-15",
     "lang": "Python",
@@ -264,7 +264,7 @@
     "desc": "Semantic grep: find code by describing what you're looking for, powered by Jev."
   },
   "Ying-Kai-Liao/jev-browser": {
-    "stars": 136,
+    "stars": 137,
     "created": "2026-09-16",
     "pushed": "2026-10-31",
     "lang": "JavaScript",
@@ -288,15 +288,15 @@
     "desc": "Control a real browser by voice. Jev (TypeSafe System One) decides intent + target in ~300 ms per spoken word; Playwright acts — often before you finish the sen"
   },
   "jkudish/jev-browser": {
-    "stars": 372,
+    "stars": 373,
     "created": "2026-09-17",
-    "pushed": "2026-11-14",
+    "pushed": "2026-11-17",
     "lang": "JavaScript",
     "archived": false,
     "desc": "Browser use using Typesafe's Jev model"
   },
   "browser-use/jev-ultrafast": {
-    "stars": 24561,
+    "stars": 24616,
     "created": "2026-09-16",
     "pushed": "2026-11-11",
     "lang": "Python",
@@ -304,7 +304,7 @@
     "desc": "Fastest and cheapest web agent"
   },
   "jev-chat/jev-chat-jarvis": {
-    "stars": 8430,
+    "stars": 8449,
     "created": "2026-09-21",
     "pushed": "2026-11-05",
     "lang": "Kotlin",
@@ -312,7 +312,7 @@
     "desc": "The chat decision assistant: before you reply, Jev reads the chat, judges intent and risk, and drafts replies you fill in with one tap. You press send. Android "
   },
   "jarrodwatts/jev-trader": {
-    "stars": 3138,
+    "stars": 3141,
     "created": "2026-09-16",
     "pushed": "2026-10-13",
     "lang": "TypeScript",
@@ -344,7 +344,7 @@
     "desc": "Ask your house a question, get a number back. Home Assistant integration for TypeSafe Jev: typed answers as sensors, four actions for automations, and a convers"
   },
   "thruwire/foreman": {
-    "stars": 827,
+    "stars": 828,
     "created": "2026-09-17",
     "pushed": "2026-10-15",
     "lang": "Python",
@@ -424,7 +424,7 @@
     "desc": "Community TypeSafe AI playground: 110 use cases, games, dilemmas and model challenges, with editable prompts, A/B comparisons and a mobile-friendly UI."
   },
   "jkudish/jev-mcp": {
-    "stars": 582,
+    "stars": 585,
     "created": "2026-09-17",
     "pushed": "2026-11-14",
     "lang": "JavaScript",
@@ -448,7 +448,7 @@
     "desc": "An easy way to use jev with your coding agent for tool calling reasoning"
   },
   "peterfriese/jev-foundation-models": {
-    "stars": 127,
+    "stars": 128,
     "created": "2026-09-21",
     "pushed": "2026-11-13",
     "lang": "Swift",
@@ -464,7 +464,7 @@
     "desc": "Official curated plugins for Cline CLI and extensions"
   },
   "Mapika/decider": {
-    "stars": 1055,
+    "stars": 1057,
     "created": "2026-09-16",
     "pushed": "2026-10-20",
     "lang": "Python",
@@ -472,7 +472,7 @@
     "desc": "A family of System One-style models fine-tuned from Qwen3.5, designed for one-pass typed decisions with calibrated probabilities."
   },
   "logan-markewich/jeff": {
-    "stars": 319,
+    "stars": 321,
     "created": "2026-09-19",
     "pushed": "2026-09-20",
     "lang": "Python",
@@ -488,7 +488,7 @@
     "desc": "A small open decision model: state + typed questions -> calibrated probabilities. A Jev / System One re-creation on Qwen3.5."
   },
   "featherless-ai/simple-jev": {
-    "stars": 659,
+    "stars": 660,
     "created": "2026-09-18",
     "pushed": "2026-11-11",
     "lang": "Python",
@@ -496,7 +496,7 @@
     "desc": "Turn any open model into a classifier/jev endpoint"
   },
   "jaredpalmer/kev": {
-    "stars": 10031,
+    "stars": 10046,
     "created": "2026-09-17",
     "pushed": "2026-11-15",
     "lang": "Python",
@@ -504,7 +504,7 @@
     "desc": "Jev-like family of decision models built on top of Qwen3.5/3.8 you can train and run on your own"
   },
   "TianyuCodings/NanoJev": {
-    "stars": 2600,
+    "stars": 2602,
     "created": "2026-09-17",
     "pushed": "2026-10-16",
     "lang": "Python",
@@ -520,7 +520,7 @@
     "desc": "The open-source System One decision model. Sub-15ms, non-autoregressive, local drop-in alternative to TypeSafe Jev."
   },
   "razorback16/openjev": {
-    "stars": 791,
+    "stars": 794,
     "created": "2026-09-18",
     "pushed": "2026-10-13",
     "lang": "Python",
@@ -536,7 +536,7 @@
     "desc": "Jev-compatible API endpoint based on open models (prefill-only)"
   },
   "nokia-applied-research/AnyJev": {
-    "stars": 1618,
+    "stars": 1621,
     "created": "2026-09-21",
     "pushed": "2026-10-21",
     "lang": "Python",
@@ -544,7 +544,7 @@
     "desc": "Turn any LLM into a Jev-style decision model: typed decisions, real probabilities, no training. (continue updating, welcome any issue and PR request)"
   },
   "fstandhartinger/jevbench": {
-    "stars": 346,
+    "stars": 348,
     "created": "2026-09-19",
     "pushed": "2026-10-15",
     "lang": "Python",
@@ -576,7 +576,7 @@
     "desc": "Using Jev as an evaluator."
   },
   "sutro-sh/jev-align": {
-    "stars": 318,
+    "stars": 320,
     "created": "2026-09-19",
     "pushed": "2026-11-04",
     "lang": "Python",
@@ -608,7 +608,7 @@
     "desc": "Tax document page classifier built on Jev decisions. 100% strict accuracy across 261 IRS forms, ~$0.001 per page."
   },
   "jerryjliu/docjev": {
-    "stars": 562,
+    "stars": 563,
     "created": "2026-09-19",
     "pushed": "2026-09-26",
     "lang": "Python",
